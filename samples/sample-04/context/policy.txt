@@ -1,0 +1,41 @@
+Data Protection & Compliance — Standard Operating Procedure (SOP-DPC-001)
+==========================================================================
+Version 2.3 | Effective: 2024-01-01 | Owner: Data Protection Officer (DPO)
+
+DATA STORAGE
+------------
+Customer data must be stored only in approved EU-region servers.
+Currently approved data centres: AWS eu-west-1 (Ireland), AWS eu-central-1 (Frankfurt).
+Any data transfer outside the EU requires a Data Transfer Agreement (DTA)
+signed by the DPO prior to the transfer.
+Temporary copies of data on developer laptops must be encrypted at rest and
+deleted within 48 hours of the task being complete.
+
+DATA RETENTION & DELETION
+--------------------------
+Personal data must be deleted within 30 days of receiving a customer deletion request.
+Deletion requests must be logged in the Data Requests Register within 24 hours of receipt.
+Automated deletion workflows must be verified by the DPO before being put into production.
+Backups containing personal data must also be purged within the 30-day window.
+
+AUDIT LOGS
+----------
+Audit logs must be retained for 7 years in accordance with financial regulation.
+Logs must be stored in an immutable format (write-once, cannot be altered).
+Access to audit logs is restricted to the DPO and the CISO.
+
+ACCESS CONTROL
+--------------
+Access to personal data is restricted to employees with a Data Access role.
+The Data Access role is granted by the DPO only.
+Access requests must be submitted via the IT helpdesk with a business justification.
+Access is reviewed and recertified quarterly.
+Departing employees must have all data access revoked within 24 hours of their last day.
+
+SECURITY INCIDENTS
+------------------
+Security incidents involving personal data must be reported to the DPO within 2 hours
+of detection, regardless of the time of day.
+The DPO will assess whether the incident requires notification to the supervisory authority
+(required within 72 hours of the organisation becoming aware of a qualifying breach).
+All incidents must be logged in the Incident Register using the standard template.

@@ -1,0 +1,6 @@
+How do I reset my password?
+What are the password requirements?
+How do I get an API key?
+How long does a large export take?
+Can I recover my API key if I forget to copy it?
+What happens if I cancel my subscription mid-month?

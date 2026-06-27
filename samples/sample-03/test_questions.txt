@@ -1,0 +1,6 @@
+How do I deploy to staging?
+Where are the database credentials?
+How do I join the on-call rotation?
+How many approvals does a PR need?
+How long does a production deploy take?
+What channel should I use during a live incident?

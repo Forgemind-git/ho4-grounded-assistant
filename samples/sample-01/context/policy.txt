@@ -1,0 +1,29 @@
+ACME Corp HR Policy — Leave & Expenses
+=======================================
+
+ANNUAL LEAVE
+------------
+Employees are entitled to 18 days of paid annual leave per calendar year.
+Leave must be requested 5 business days in advance via the HR portal.
+Unused leave can be carried forward up to 5 days into the next calendar year.
+Leave taken beyond the entitlement will be treated as unpaid leave.
+
+SICK LEAVE
+----------
+Employees are entitled to 10 days of paid sick leave per year.
+A medical certificate is required for sick leave exceeding 3 consecutive days.
+Sick leave does not carry forward to the next year.
+
+EXPENSE CLAIMS
+--------------
+Expense claims must be submitted within 30 days of the expense date.
+Receipts are required for all claims over $25.
+Claims over $500 require manager pre-approval before the expense is incurred.
+Mileage is reimbursed at $0.65 per kilometre for approved business travel.
+International travel expenses require VP-level approval regardless of amount.
+
+EXPENSE CATEGORIES
+------------------
+Approved categories: meals, accommodation, transport, office supplies, training materials.
+Entertainment expenses (client dinners, team events) require a list of attendees.
+Personal expenses (gym, personal subscriptions) are not reimbursable.

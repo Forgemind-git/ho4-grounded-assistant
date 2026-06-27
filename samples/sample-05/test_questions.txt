@@ -1,0 +1,6 @@
+What is the difference between supervised and unsupervised learning?
+What is backpropagation?
+How is precision different from recall?
+What is overfitting?
+What does ReLU do?
+What is the F1 score?
