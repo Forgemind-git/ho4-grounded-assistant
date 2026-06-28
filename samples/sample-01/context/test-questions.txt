@@ -1,23 +1,17 @@
-# Test Questions — HR Policy Assistant
-# Use these to verify your assistant is working correctly after setup.
+Test Questions — HR Policy Assistant
+Ask these inside your Claude Project to check it is grounded correctly.
 
-[TODO: Question 1 — something that IS clearly covered in your leave policy]
-Expected: A specific, cited answer referencing the leave policy section
+1. How many days of annual leave do I get?
+   Expect: 20 days, citing the Annual Leave section.
 
-[TODO: Question 2 — something that IS clearly covered in your expense policy]
-Expected: A specific, cited answer referencing the expense policy section
+2. Do I need a receipt for a $20 lunch?
+   Expect: No — receipts are only required over $25 (Expense Claims section).
 
-[TODO: Question 3 — something that is NOT in your documents at all]
-Expected: "I don't have that information in my knowledge base. Please contact HR directly for assistance."
+3. What happens if I'm off sick for more than 3 days?
+   Expect: A medical certificate is required (Sick Leave section).
 
-[TODO: Question 4 — a boundary/edge case, e.g. "What if I only have $24 of receipts?"]
-Expected: [TODO: what should the answer include?]
+4. Do I need approval before a $600 business expense?
+   Expect: Yes — claims over $500 require manager pre-approval.
 
-[TODO: Question 5 — optional: an ambiguous question to test citation quality]
-Expected: [TODO]
-
----
-# Suggested questions to replace with your own:
-# How many sick days do I get per year?
-# What is the expense claim deadline?
-# Can I carry over unused leave?
+5. How much is the work-from-home internet allowance?
+   Expect: "I don't have that information in my knowledge base..." (not in the docs).

@@ -1,2 +1,5 @@
-# Test questions have moved
-# See context/test-questions.txt
+How do I set up my local environment?
+Who do I contact for a design review?
+What time is the daily standup and where?
+How do I join the on-call rotation?
+What's the company holiday schedule?

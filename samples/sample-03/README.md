@@ -1,45 +1,55 @@
 # HO4 Sample 3 — Team Onboarding Grounded Assistant
 
-## Your task
+## What you'll build
+An onboarding buddy that answers a new joiner's setup questions using **only** your team's
+wiki and runbooks — so it points them to the real process and the right person, instead of
+guessing. Ask "How do I set up my local environment?" and it gives your actual steps; ask
+"Who do I contact for a design review?" and it names the right person from the wiki. This
+folder ships a complete, working example (a fictional "Orbit Engineering" team) you can build
+in minutes, then swap in your own docs.
 
-New joiners ask the same setup questions for weeks. Build an onboarding buddy grounded only in your team wiki and runbooks.
+## Use it with your Claude.ai subscription
+No API key needed. Just your normal Claude.ai login (Projects is available on Claude Pro
+or Team).
 
-## What you will build
+1. Open **claude.ai** and sign in.
+2. In the left sidebar click **Projects**, then **+ New Project**. Name it `Team Onboarding Buddy`.
+3. Click **Add content** → upload the three doc files from this folder's `context/` folder:
+   **`team-wiki.txt`**, **`setup-runbook.txt`**, and **`tools-guide.txt`**.
+4. Click **Set project instructions** and paste the example prompt below. Click **Save**.
+5. Start a new chat **inside the project** and ask the questions in
+   **`context/test-questions.txt`**. Answers should cite the wiki or runbook; anything not in
+   the docs should send the new joiner to your team Slack channel.
 
-A Claude Project that answers new-joiner questions ONLY from your team's actual wiki and runbooks — no guessing about tools, processes, or people.
+No code, no terminal — a grounded onboarding helper.
 
-## Step-by-step
-
-1. Open claude.ai → click "Projects" → "New Project"
-2. Name it: "Team Onboarding Buddy"
-3. Fill in the context files in the `context/` folder with your real team docs
-4. Upload all files from the `context/` folder into the Project
-5. Paste the contents of `context/instructions.txt` into the Project instructions field
-6. Test with the questions in `context/test-questions.txt`
-
-## What to do now
-
-1. **Fill in `context/team-wiki.txt`** — team structure, key contacts, channels, norms
-2. **Fill in `context/setup-runbook.txt`** — environment setup steps and access requests
-3. **Fill in `context/tools-guide.txt`** — which tools you use and how to use them
-4. **Edit `context/instructions.txt`** — update the TODO lines for your team
-5. **Fill in `context/test-questions.txt`** — write questions a new joiner would actually ask
-
-## Files in this sample
+## The example prompt
+Paste this into the Project's **instructions** field (it's the content of
+`context/instructions.txt`):
 
 ```
-sample-03/
-├── README.md                      ← You are here
-└── context/
-    ├── team-wiki.txt              ← TODO: team structure, contacts, channels
-    ├── setup-runbook.txt          ← TODO: environment setup and access steps
-    ├── tools-guide.txt            ← TODO: tools, logins, how-tos
-    ├── instructions.txt           ← TODO: edit for your team
-    └── test-questions.txt         ← TODO: add real new-joiner questions
+You are a Team Onboarding Buddy for the Orbit Engineering team.
+
+You help new team members get up to speed using ONLY the team wiki, runbooks, and tools guides provided in this Project.
+
+Rules you must follow:
+1. If the answer is in the documents, give a clear, helpful answer and cite the section (e.g. "According to the Setup Runbook...").
+2. If the answer is NOT in the documents, say: "I don't have that information in my knowledge base. I'd recommend asking in #orbit-eng on Slack or checking with your team lead."
+3. Never invent tools, processes, or people not mentioned in the documents.
+4. Be friendly and welcoming — the reader is brand new to the team.
+5. When referencing Slack channels, use the # prefix (e.g. #deploys).
 ```
 
-## Success criteria
+Then ask, for example: **"How do I join the on-call rotation?"** — it should tell you to
+message @oncall-admin in Slack, straight from the tools guide.
 
-- Setup and access questions get specific, step-by-step answers
-- "Who do I ask about X?" questions cite the right person or channel
-- Questions not in the docs redirect to the right Slack channel or team lead
+## Make it your own
+- Replace the three example docs with your real wiki pages, runbooks, and tools guide.
+- Update the team name and the Slack channel in the instructions.
+- Add an architecture overview or a glossary — the assistant will use everything you upload.
+
+## Optional — automate it with the API (advanced)
+You do **not** need this for the course. If you later want to run the before/after demo from
+code, the `main` branch includes a `grounded_qa.py` script. It needs an Anthropic API key,
+which is separate from your Claude.ai subscription (so it costs money) and is not part of the
+hands-on.

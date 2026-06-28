@@ -1,23 +1,17 @@
-# Test Questions — Product Support Assistant
-# Use these to verify your assistant is working correctly after setup.
+Test Questions — Product Support Assistant
+Ask these inside your Claude Project to check it is grounded correctly.
 
-[TODO: Question 1 — something clearly covered in your product manual]
-Expected: A step-by-step answer citing the manual section
+1. How do I reset my password?
+   Expect: The numbered steps from the Account Management section.
 
-[TODO: Question 2 — something covered in your FAQ]
-Expected: The exact FAQ answer
+2. How many agents can I have on the Starter plan?
+   Expect: Up to 3 agents (FAQ).
 
-[TODO: Question 3 — a troubleshooting question covered in the guide]
-Expected: The listed cause and fix steps
+3. Why did my export fail?
+   Expect: Empty date range or too-large export; narrow the range (Troubleshooting).
 
-[TODO: Question 4 — something NOT in any of your docs]
-Expected: "I don't have that information in my knowledge base. Please contact our support team for assistance."
+4. Can I get my API key back if I lost it?
+   Expect: No — revoke and create a new one (FAQ).
 
-[TODO: Question 5 — an edge case, e.g. a feature your product doesn't have]
-Expected: Clear "not available" response, no guessing
-
----
-# Suggested questions to replace with your own:
-# How do I reset my password?
-# What file formats are supported?
-# Why is my export failing?
+5. Does Brightdesk have a mobile app?
+   Expect: "I don't have that information in my knowledge base..." (not in the docs).

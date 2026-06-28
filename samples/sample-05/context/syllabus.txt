@@ -1,30 +1,27 @@
-[Course Name] — Official Syllabus
-===================================
-
-[TODO: Replace this file with your real course syllabus]
-[TODO: Course code, institution, academic year]
+ML101 — Introduction to Machine Learning (Official Syllabus)
+============================================================
+Course Code: ML101 | Institution: Riverside University | Semester: Fall 2024
 
 COURSE OVERVIEW
 ---------------
-[TODO: What is this course about in 2–3 sentences?]
-[TODO: What are the 3–5 key learning objectives for the whole course?]
+This course introduces the core ideas of machine learning: how systems learn from data to
+make predictions or decisions. No prior ML experience is assumed.
+
+Learning objectives:
+1. Explain the three main paradigms of machine learning.
+2. Describe how a neural network is structured and trained.
+3. Evaluate a model using standard classification metrics.
 
 WEEK-BY-WEEK TOPICS
---------------------
-Week 1: [TODO: Topic name and key concepts covered]
-Week 2: [TODO: Topic name and key concepts covered]
-Week 3: [TODO: Topic name and key concepts covered]
-Week 4: [TODO: Topic name and key concepts covered]
-Week 5: [TODO: Topic name and key concepts covered]
-Week 6: [TODO: Topic name and key concepts covered]
-[TODO: Add more weeks as needed]
+-------------------
+Week 1: What is machine learning? Supervised, unsupervised, reinforcement learning.
+Week 2: Neural networks — layers, activation functions, training.
+Week 3: Model evaluation — accuracy, precision, recall, overfitting.
 
 ASSESSMENT
 ----------
-[TODO: How is the course assessed? e.g. exam percentage, coursework percentage]
-[TODO: Are there any key deadlines?]
-[TODO: What topics are most heavily weighted in the exam?]
+60% final exam, 40% coursework. The exam focuses most heavily on Weeks 2 and 3.
 
 RECOMMENDED READING
 -------------------
-[TODO: List the key textbooks or readings for the course]
+"Hands-On Machine Learning" (chapters 1–4) and the weekly chapter notes provided.

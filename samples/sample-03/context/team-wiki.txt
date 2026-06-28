@@ -1,31 +1,29 @@
-[Team Name] — Team Wiki
-========================
-
-[TODO: Replace this file with your team's real wiki content]
+Orbit Engineering — Team Wiki
+=============================
 
 TEAM STRUCTURE
 --------------
-[TODO: Who are the key people on the team? List names/roles]
-[TODO: Who is the team lead or engineering manager?]
-[TODO: Who handles design reviews?]
-[TODO: Who handles security reviews?]
+Engineering Manager: Priya Shah.
+Tech Lead: Marcus Lee (architecture and design reviews).
+Security reviews: Dana Okoro.
+New joiners should introduce themselves in #orbit-eng on their first day.
 
 SLACK CHANNELS
 --------------
-[TODO: List the main Slack channels and what each is used for]
-[TODO: Where should a new joiner introduce themselves?]
-[TODO: What channel is used for incidents?]
-[TODO: What channel is used for deployments?]
+#general — company-wide announcements
+#orbit-eng — engineering team discussion and introductions
+#deploys — deployment notifications and rollbacks
+#on-call — on-call schedule and alerts
+#incidents — live incident coordination
 
 CEREMONIES / MEETINGS
 ---------------------
-[TODO: When is the daily standup? Where is it held (Zoom / in-person)?]
-[TODO: When is the sprint planning meeting?]
-[TODO: When is retrospective?]
-[TODO: Are there any async ceremonies — e.g. a weekly written update?]
+Daily standup: 9:45am on Zoom (link in the #orbit-eng channel topic).
+Sprint planning: Monday 2:00pm, every two weeks.
+Retrospective: last Friday of the sprint, 3:00pm.
 
 TEAM NORMS
 ----------
-[TODO: What are the team's working hours expectations?]
-[TODO: What is the code review SLA — how quickly should you review PRs?]
-[TODO: Any on-call rotation details?]
+Core hours are 10:00am–4:00pm; outside that, work flexibly.
+Code review SLA: review open PRs within one business day.
+Be kind in reviews — comment on the code, not the person.

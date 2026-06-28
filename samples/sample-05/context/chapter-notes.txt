@@ -1,30 +1,46 @@
-[Course Name] — Chapter Notes
-==============================
+ML101 — Chapter Notes
+=====================
 
-[TODO: Replace this file with your real lecture notes or chapter summaries]
+CHAPTER 1: INTRODUCTION TO MACHINE LEARNING
+-------------------------------------------
+Machine learning is a branch of AI where systems learn from data instead of being
+explicitly programmed for each task.
 
-CHAPTER 1: [TODO: Chapter title]
-----------------------------------
-[TODO: Key concept 1 — definition in your own words]
-[TODO: Key concept 2 — definition in your own words]
-[TODO: Key formula or model — what it is and what each part means]
-[TODO: Example that illustrates the main concept]
+The three main paradigms:
+1. Supervised learning — trained on labelled data (each input has a known output).
+   Goal: learn a mapping from inputs to outputs. Examples: spam detection, price prediction.
+2. Unsupervised learning — finds patterns in data without labels.
+   Goal: discover structure or groupings. Examples: customer segmentation, anomaly detection.
+3. Reinforcement learning — an agent learns by trial and error in an environment, receiving
+   rewards and penalties. Examples: game-playing AI, robot navigation.
 
-CHAPTER 2: [TODO: Chapter title]
-----------------------------------
-[TODO: Key concept 1]
-[TODO: Key concept 2]
-[TODO: How does this chapter relate to chapter 1?]
+CHAPTER 2: NEURAL NETWORKS
+--------------------------
+A neural network is a model loosely inspired by the brain.
+Structure: an input layer, one or more hidden layers, and an output layer.
 
-CHAPTER 3: [TODO: Chapter title]
-----------------------------------
-[TODO: Key concept 1]
-[TODO: Key concept 2]
-[TODO: Common misconceptions about this topic]
+Activation functions add non-linearity so the network can learn complex patterns:
+- ReLU: outputs max(0, x). Fast, common in hidden layers.
+- Sigmoid: outputs a value between 0 and 1. Used for binary classification.
+- Softmax: outputs a probability distribution over multiple classes.
 
-[TODO: Add as many chapters as your course has]
+Training has four steps:
+1. Forward pass — input flows through the network to make a prediction.
+2. Loss calculation — measure the gap between prediction and the true answer.
+3. Backpropagation — compute how much each weight contributed to the error, working
+   backwards through the network using the chain rule.
+4. Weight update — adjust weights to reduce the loss (gradient descent).
 
-IMPORTANT DEFINITIONS SUMMARY
-------------------------------
-[TODO: List the 5–10 most important definitions in the course, one per line]
-[TODO: These are what you most need the assistant to be able to explain]
+CHAPTER 3: MODEL EVALUATION
+---------------------------
+Accuracy = correct predictions / total predictions.
+Precision = TP / (TP + FP) — of those predicted positive, how many really were? High
+precision means few false alarms.
+Recall = TP / (TP + FN) — of all the real positives, how many did the model find? High
+recall means few misses.
+F1 score = 2 * (Precision * Recall) / (Precision + Recall) — balances precision and recall.
+
+Overfitting: the model memorises the training data and does poorly on new data (low training
+loss, high validation loss). Fixes: more data, regularisation, a simpler model.
+Underfitting: the model is too simple to capture the pattern (high training and validation
+loss). Fix: a more complex model or more training.

@@ -1,2 +1,5 @@
-# Test questions have moved
-# See context/test-questions.txt
+Can I store customer data on a US server?
+How long do I have to delete data after a deletion request?
+When must I report a security incident?
+How long must audit logs be kept?
+What is the policy on using customer data for marketing emails?

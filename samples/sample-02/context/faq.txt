@@ -1,21 +1,18 @@
-[Product Name] — Frequently Asked Questions
-=============================================
+Brightdesk — Frequently Asked Questions
+=======================================
 
-[TODO: Replace this file with your real FAQ content]
+Q: How do I add a teammate?
+A: Go to Settings > Team > Invite, enter their email, and choose a role (Agent or Admin).
 
-Q: [TODO: Most common question your support team receives]
-A: [TODO: Official answer]
+Q: How many agents can I have on the Starter plan?
+A: The Starter plan includes up to 3 agents. Upgrade to Pro for unlimited agents.
 
-Q: [TODO: Second most common question]
-A: [TODO: Official answer]
+Q: Can I recover an API key if I forget to copy it?
+A: No. API keys are shown only once when created. If lost, revoke it and generate a new one
+   in Settings > Integrations > API Keys.
 
-Q: [TODO: Question about billing or subscription]
-A: [TODO: Official answer]
+Q: Where is my data stored?
+A: All customer data is stored in EU-region data centres and is encrypted at rest.
 
-Q: [TODO: Question about data or privacy]
-A: [TODO: Official answer]
-
-Q: [TODO: Question about limits or quotas]
-A: [TODO: Official answer]
-
-[TODO: Add as many Q&A pairs as your support team needs]
+Q: What is the rate limit for the API?
+A: 1,000 requests per minute per API key.

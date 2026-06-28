@@ -1,35 +1,40 @@
-[Organisation Name] — Standard Operating Procedure
-====================================================
-
-[TODO: Replace this file with your real SOP document]
-[TODO: Include the SOP reference number and version — e.g. SOP-DPC-001 v2.3]
+Data Protection & Compliance — Standard Operating Procedure (SOP-DPC-001)
+=========================================================================
+Version 2.3 | Effective: 2024-01-01 | Owner: Data Protection Officer (DPO)
 
 SCOPE
 -----
-[TODO: What processes or activities does this SOP cover?]
-[TODO: Who does this SOP apply to?]
+This SOP covers the storage, retention, access, and breach handling of customer
+personal data. It applies to all employees and contractors.
 
-DATA HANDLING
--------------
-[TODO: What categories of data are covered by this SOP?]
-[TODO: Where is data permitted to be stored — e.g. approved regions or systems only?]
-[TODO: Who is authorised to access personal or sensitive data?]
-[TODO: What must be done before transferring data to a third party?]
+DATA STORAGE
+------------
+Customer data must be stored only in approved EU-region servers:
+AWS eu-west-1 (Ireland) and AWS eu-central-1 (Frankfurt).
+Any transfer of personal data outside the EU requires a Data Transfer Agreement (DTA)
+signed by the DPO before the transfer takes place.
+Temporary copies on laptops must be encrypted and deleted within 48 hours of task completion.
 
-TRANSACTION / APPROVAL RULES
------------------------------
-[TODO: What thresholds require additional approvals? e.g. transactions over a certain amount]
-[TODO: Who is authorised to approve transactions at each threshold?]
-[TODO: What documentation must be completed before approval?]
+DATA RETENTION & DELETION
+-------------------------
+Personal data must be deleted within 30 days of a customer deletion request.
+Deletion requests must be logged in the Data Requests Register within 24 hours of receipt.
+Backups containing personal data must also be purged within the 30-day window.
 
-BREACH AND INCIDENT PROCEDURES
--------------------------------
-[TODO: What constitutes a reportable incident or breach under this SOP?]
-[TODO: What is the notification deadline after discovering a breach?]
-[TODO: Who must be notified internally? Who must be notified externally?]
+ACCESS CONTROL
+--------------
+Access to personal data is restricted to employees holding the Data Access role.
+The Data Access role is granted by the DPO only, via the IT helpdesk with a business
+justification. Access is recertified quarterly and revoked within 24 hours of an
+employee's last day.
 
-DATA SUBJECT RIGHTS
--------------------
-[TODO: What rights do data subjects have under this SOP?]
-[TODO: Who is responsible for handling data subject requests?]
-[TODO: What is the response deadline for a data subject request?]
+SECURITY INCIDENTS
+------------------
+Security incidents involving personal data must be reported to the DPO within 2 hours of
+detection, at any time of day. The DPO decides whether the supervisory authority must be
+notified (required within 72 hours of a qualifying breach).
+
+AUDIT LOGS
+----------
+Audit logs must be retained for 7 years in an immutable (write-once) format.
+Access to audit logs is restricted to the DPO and the CISO.

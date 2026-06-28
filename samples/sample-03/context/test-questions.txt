@@ -1,23 +1,17 @@
-# Test Questions — Team Onboarding Buddy
-# Use these to verify your assistant is working correctly after setup.
+Test Questions — Team Onboarding Buddy
+Ask these inside your Claude Project to check it is grounded correctly.
 
-[TODO: Question 1 — an access/setup question that IS in the runbook]
-Expected: Step-by-step answer citing the setup runbook
+1. How do I set up my local environment?
+   Expect: The numbered steps from the Setup Runbook.
 
-[TODO: Question 2 — a "who do I contact" question covered in the team wiki]
-Expected: Specific name, role, or Slack channel from the wiki
+2. Who do I contact for a design review?
+   Expect: Marcus Lee, the Tech Lead (Team Wiki).
 
-[TODO: Question 3 — a ceremony/meeting question covered in the team wiki]
-Expected: Day, time, and location of the meeting
+3. What time is the daily standup and where?
+   Expect: 9:45am on Zoom (Team Wiki).
 
-[TODO: Question 4 — something NOT in any of your docs]
-Expected: Redirect to the team's main Slack channel or team lead
+4. How do I join the on-call rotation?
+   Expect: Message @oncall-admin in Slack (Tools Guide).
 
-[TODO: Question 5 — a tools question covered in the tools guide]
-Expected: Specific tool name and how to get access
-
----
-# Suggested questions to replace with your own:
-# How do I get access to the staging environment?
-# Who do I contact for design reviews?
-# Where are sprint ceremonies held?
+5. What's the company holiday schedule?
+   Expect: "I don't have that information in my knowledge base..." (not in the docs).

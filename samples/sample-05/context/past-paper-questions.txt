@@ -1,34 +1,24 @@
-[Course Name] — Past Paper Questions
-======================================
+ML101 — Past Paper Questions
+============================
 
-[TODO: Replace this file with real past exam questions and model answers]
-[TODO: Source: past papers are usually available from your institution's library or course page]
+EXAM YEAR: 2023
+---------------
+Question 1: Explain the difference between supervised and unsupervised learning. [6 marks]
+Model Answer: Supervised learning trains on labelled data to map inputs to known outputs
+(e.g. spam detection). Unsupervised learning finds structure in unlabelled data
+(e.g. customer segmentation). Key difference: labels are present vs absent.
 
-EXAM YEAR: [TODO: e.g. 2023]
-------------------------------
+Question 2: Describe the four steps of training a neural network. [8 marks]
+Model Answer: Forward pass, loss calculation, backpropagation, weight update (gradient
+descent). See Chapter 2.
 
-Question 1: [TODO: Paste a past exam question here]
-Model Answer: [TODO: Paste or write a model answer — key points only, not essay length]
-Marks: [TODO: How many marks is this question worth?]
-
-Question 2: [TODO: Paste a past exam question here]
-Model Answer: [TODO: Model answer]
-Marks: [TODO]
-
-Question 3: [TODO: Paste a past exam question here]
-Model Answer: [TODO: Model answer]
-Marks: [TODO]
-
-EXAM YEAR: [TODO: e.g. 2022]
-------------------------------
-
-Question 1: [TODO]
-Model Answer: [TODO]
-Marks: [TODO]
-
-[TODO: Add more years and questions as available]
+EXAM YEAR: 2022
+---------------
+Question 1: Define precision and recall and explain when each matters. [6 marks]
+Model Answer: Precision = TP/(TP+FP), important when false alarms are costly. Recall =
+TP/(TP+FN), important when missing a positive is costly.
 
 COMMON EXAM THEMES
 ------------------
-[TODO: Based on past papers, what topics come up most often?]
-[TODO: What question formats are used — essay, calculation, short answer?]
+Neural network training steps and model evaluation metrics come up most years, usually as
+short-answer or calculation questions.

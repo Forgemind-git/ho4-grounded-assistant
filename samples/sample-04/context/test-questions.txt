@@ -1,24 +1,18 @@
-# Test Questions — Compliance SOP Assistant
-# Use these to verify your assistant is working correctly after setup.
-# NOTE: In compliance, a wrong answer matters. Test edge cases carefully.
+Test Questions — Compliance SOP Assistant
+Ask these inside your Claude Project to check it is grounded correctly.
+In compliance, a wrong answer matters — test the refusal and violation cases carefully.
 
-[TODO: Question 1 — an approval threshold question clearly covered in the SOP]
-Expected: Exact threshold and approval steps, with section citation
+1. Can I store customer data on a US server?
+   Expect: No — only approved EU regions; a DTA signed by the DPO is needed to transfer out.
 
-[TODO: Question 2 — a data subject rights question covered in the SOP]
-Expected: Specific deadline and responsible person/role
+2. How long do I have to delete data after a deletion request?
+   Expect: Within 30 days (Data Retention & Deletion).
 
-[TODO: Question 3 — a breach/incident question covered in the SOP]
-Expected: Notification deadline and escalation chain
+3. When must I report a security incident?
+   Expect: To the DPO within 2 hours of detection (Security Incidents).
 
-[TODO: Question 4 — something NOT in any of your SOP documents]
-Expected: Clear "not covered" response and escalation prompt — no guessing
+4. How long must audit logs be kept?
+   Expect: 7 years, in immutable format (Audit Logs).
 
-[TODO: Question 5 — a potential violation scenario, e.g. "I want to do X, is that OK?"]
-Expected: The assistant should flag the violation and cite the correct procedure
-
----
-# Suggested questions to replace with your own:
-# What must I do before approving a transaction over £10,000?
-# Who signs off on a data-subject request?
-# What is the breach notification deadline?
+5. What is the policy on using customer data for marketing emails?
+   Expect: "This is not covered in the current SOP documents. Please escalate to the DPO..."

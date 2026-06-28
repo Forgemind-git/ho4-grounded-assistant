@@ -1,24 +1,25 @@
-[Company Name] Expense Policy
-==============================
-
-[TODO: Replace this file with your company's real expense policy]
+Northwind Trading Co. — Expense Policy
+======================================
 
 EXPENSE CLAIMS
 --------------
-[TODO: What is the deadline to submit an expense claim after the expense date?]
-[TODO: What is the minimum amount that requires a receipt?]
-[TODO: What is the amount threshold that requires manager pre-approval?]
-[TODO: What is the mileage reimbursement rate for business travel?]
-[TODO: Who must approve international travel expenses?]
+Expense claims must be submitted within 30 days of the expense date.
+Receipts are required for all claims over $25.
+Claims over $500 require manager pre-approval before the expense is incurred.
+Mileage is reimbursed at $0.65 per kilometre for approved business travel.
+International travel expenses require VP-level approval regardless of amount.
 
 APPROVED EXPENSE CATEGORIES
-----------------------------
-[TODO: List the categories of expenses that are approved — e.g. meals, transport, accommodation, training materials]
+---------------------------
+Approved categories: meals, accommodation, transport, office supplies, and training materials.
 
 NON-REIMBURSABLE EXPENSES
---------------------------
-[TODO: List expenses that are NOT reimbursable — e.g. personal subscriptions, gym membership]
+-------------------------
+The following are not reimbursable: gym memberships, personal subscriptions,
+traffic fines or penalties, and personal entertainment.
 
 ENTERTAINMENT EXPENSES
------------------------
-[TODO: Are client dinners or team events reimbursable? What documentation is required?]
+----------------------
+Client dinners and team events are reimbursable but require a list of attendees and a
+short note on the business purpose. Alcohol is reimbursable only at client events, capped
+at $30 per person.

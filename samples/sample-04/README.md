@@ -1,45 +1,56 @@
 # HO4 Sample 4 — Compliance SOP Grounded Assistant
 
-## Your task
+## What you'll build
+A compliance assistant that answers staff questions using **only** your approved Standard
+Operating Procedure — and *refuses* to guess when the SOP doesn't cover something, which is
+exactly what you want when a wrong answer has real consequences. Ask "Can I store customer
+data on a US server?" and it quotes the exact rule; ask something off-procedure and it tells
+you to escalate to the DPO instead of inventing an answer. This folder ships a complete,
+working example (a fictional data-protection SOP) you can build in minutes, then swap in your
+own procedure.
 
-You own a regulated SOP where a wrong answer has real consequences. Build a compliance assistant grounded only in your SOP documents.
+## Use it with your Claude.ai subscription
+No API key needed. Just your normal Claude.ai login (Projects is available on Claude Pro
+or Team).
 
-## What you will build
+1. Open **claude.ai** and sign in.
+2. In the left sidebar click **Projects**, then **+ New Project**. Name it `Compliance SOP Assistant`.
+3. Click **Add content** → upload the three doc files from this folder's `context/` folder:
+   **`sop-document.txt`**, **`compliance-checklist.txt`**, and **`escalation-guide.txt`**.
+4. Click **Set project instructions** and paste the example prompt below. Click **Save**.
+5. Start a new chat **inside the project** and ask the questions in
+   **`context/test-questions.txt`** — including the ones that are *not* in the SOP. It should
+   quote exact figures and deadlines, and refuse + escalate when something isn't covered.
 
-A Claude Project that answers compliance questions ONLY from your official SOP documents — exact citations, no guessing at regulatory requirements.
+No code, no terminal — a grounded compliance helper.
 
-## Step-by-step
-
-1. Open claude.ai → click "Projects" → "New Project"
-2. Name it: "Compliance SOP Assistant"
-3. Fill in the context files in the `context/` folder with your real SOP content
-4. Upload all files from the `context/` folder into the Project
-5. Paste the contents of `context/instructions.txt` into the Project instructions field
-6. Test with the questions in `context/test-questions.txt`
-
-## What to do now
-
-1. **Fill in `context/sop-document.txt`** — your official SOP with section names and rules
-2. **Fill in `context/compliance-checklist.txt`** — step-by-step checklists for regulated processes
-3. **Fill in `context/escalation-guide.txt`** — who to escalate to and under what conditions
-4. **Edit `context/instructions.txt`** — update the TODO lines for your compliance domain
-5. **Fill in `context/test-questions.txt`** — write questions that test compliance edge cases
-
-## Files in this sample
+## The example prompt
+Paste this into the Project's **instructions** field (it's the content of
+`context/instructions.txt`):
 
 ```
-sample-04/
-├── README.md                          ← You are here
-└── context/
-    ├── sop-document.txt               ← TODO: your official SOP rules and procedures
-    ├── compliance-checklist.txt       ← TODO: step-by-step compliance checklists
-    ├── escalation-guide.txt           ← TODO: escalation contacts and thresholds
-    ├── instructions.txt               ← TODO: edit for your compliance domain
-    └── test-questions.txt             ← TODO: add compliance test questions
+You are a Compliance SOP Assistant for the Data Protection team.
+
+You answer compliance questions ONLY using the Standard Operating Procedure documents provided in this Project.
+
+Rules you must follow:
+1. If the answer is in the SOP, give a precise answer and always cite the section name and rule (e.g. "Per the Access Control section of SOP-DPC-001...").
+2. If the answer is NOT in the SOP, say: "This is not covered in the current SOP documents. Please escalate to the DPO directly for guidance."
+3. Never guess at regulatory requirements or invent compliance rules not in the documents.
+4. Quote exact figures and deadlines from the SOP — do not paraphrase in a way that changes the meaning.
+5. If a described action appears to violate the SOP, say so clearly and explain the correct procedure.
 ```
 
-## Success criteria
+Then ask, for example: **"When must I report a security incident?"** — it should answer "to
+the DPO within 2 hours of detection", citing the Security Incidents section.
 
-- Questions covered by the SOP get precise, section-cited answers
-- Questions NOT in the SOP escalate clearly rather than guessing
-- Potential violations are flagged with the correct procedure
+## Make it your own
+- Replace the example SOP, checklists, and escalation guide with your real, approved documents.
+- Update the SOP reference number, the escalation contact, and the tone in the instructions.
+- Because guessing is unacceptable here, keep rule 2 strict — the refusal is the whole point.
+
+## Optional — automate it with the API (advanced)
+You do **not** need this for the course. If you later want to run the before/after demo from
+code, the `main` branch includes a `grounded_qa.py` script. It needs an Anthropic API key,
+which is separate from your Claude.ai subscription (so it costs money) and is not part of the
+hands-on.

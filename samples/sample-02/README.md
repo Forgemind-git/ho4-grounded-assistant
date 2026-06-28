@@ -1,45 +1,55 @@
-# HO4 Sample 2 — Product Docs Grounded Assistant
+# HO4 Sample 2 — Product Support Grounded Assistant
 
-## Your task
+## What you'll build
+A support assistant that answers customer "how do I…?" questions using **only** your product
+documentation — so it never invents a feature or a setting that doesn't exist. Ask "How do I
+reset my password?" and it gives the real steps from your manual; ask about something you
+don't support and it says so and points to your support email. This folder ships a complete,
+working example for a fictional helpdesk product ("Brightdesk") that you can run in minutes,
+then swap in your own docs.
 
-Support agents waste time digging through manuals mid-chat. Build an assistant grounded only in your product documentation.
+## Use it with your Claude.ai subscription
+No API key needed. Just your normal Claude.ai login (Projects is available on Claude Pro
+or Team).
 
-## What you will build
+1. Open **claude.ai** and sign in.
+2. In the left sidebar click **Projects**, then **+ New Project**. Name it `Product Support Assistant`.
+3. Click **Add content** → upload the three doc files from this folder's `context/` folder:
+   **`product-manual.txt`**, **`faq.txt`**, and **`troubleshooting-guide.txt`**.
+4. Click **Set project instructions** and paste the example prompt below. Click **Save**.
+5. Start a new chat **inside the project** and ask the questions in
+   **`context/test-questions.txt`**. Answers should be step-by-step and cite the doc section;
+   anything not in the docs should get the "contact support" reply.
 
-A Claude Project that answers product support questions ONLY from your uploaded documentation — no invented features, no generic SaaS advice.
+No code, no terminal — a grounded support bot.
 
-## Step-by-step
-
-1. Open claude.ai → click "Projects" → "New Project"
-2. Name it: "Product Support Assistant"
-3. Fill in the context files in the `context/` folder with your real product docs
-4. Upload all files from the `context/` folder into the Project
-5. Paste the contents of `context/instructions.txt` into the Project instructions field
-6. Test with the questions in `context/test-questions.txt`
-
-## What to do now
-
-1. **Fill in `context/product-manual.txt`** — core product features and how-to steps
-2. **Fill in `context/faq.txt`** — common questions and official answers
-3. **Fill in `context/troubleshooting-guide.txt`** — known errors and fixes
-4. **Edit `context/instructions.txt`** — update the TODO lines for your product
-5. **Fill in `context/test-questions.txt`** — write questions that cover and miss your docs
-
-## Files in this sample
+## The example prompt
+Paste this into the Project's **instructions** field (it's the content of
+`context/instructions.txt`):
 
 ```
-sample-02/
-├── README.md                          ← You are here
-└── context/
-    ├── product-manual.txt             ← TODO: add product features and instructions
-    ├── faq.txt                        ← TODO: add frequently asked questions
-    ├── troubleshooting-guide.txt      ← TODO: add error codes and fixes
-    ├── instructions.txt               ← TODO: edit for your product
-    └── test-questions.txt             ← TODO: add your test questions
+You are a Product Support Assistant for Brightdesk.
+
+You answer user questions ONLY using the product documentation provided in this Project.
+
+Rules you must follow:
+1. If the answer is in the documentation, give a clear step-by-step answer and cite the relevant section (e.g. "See the Data and Exports section...").
+2. If the answer is NOT in the documentation, say: "I don't have that information in my knowledge base. Please contact our support team at support@brightdesk.example.com."
+3. Never invent features, settings, or procedures that are not described in the documents.
+4. Be friendly and precise — users may be non-technical, so keep instructions simple.
+5. When giving steps, use a numbered list.
 ```
 
-## Success criteria
+Then ask, for example: **"Why did my export fail?"** — it should explain the cause (empty
+date range or too-large export) and how to fix it, straight from the troubleshooting guide.
 
-- Questions covered by the docs get step-by-step, cited answers
-- Questions NOT in the docs get: "I don't have that information in my knowledge base."
-- No invented UI flows or features
+## Make it your own
+- Replace the three example docs with your real manual, FAQ, and troubleshooting pages.
+- Update the support email and tone in the instructions.
+- Add release notes or a "known issues" file — the assistant will draw on all of them.
+
+## Optional — automate it with the API (advanced)
+You do **not** need this for the course. If you later want to run the before/after demo from
+code, the `main` branch includes a `grounded_qa.py` script. It needs an Anthropic API key,
+which is separate from your Claude.ai subscription (so it costs money) and is not part of the
+hands-on.

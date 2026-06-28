@@ -1,30 +1,22 @@
-[Team Name] — Setup Runbook
-============================
-
-[TODO: Replace this file with your team's real setup steps]
+Orbit Engineering — Setup Runbook
+=================================
 
 LOCAL DEVELOPMENT SETUP
 -----------------------
-[TODO: Step 1 — e.g. Install the required tools (Node version, Python version, etc.)]
-[TODO: Step 2 — e.g. Clone the main repo]
-[TODO: Step 3 — e.g. Copy .env.example to .env and get secrets from ...]
-[TODO: Step 4 — e.g. Run the dev server with ...]
+1. Install Node 20 and pnpm.
+2. Clone the main repo: github.com/orbit/app.
+3. Copy .env.example to .env and get the secret values from the team 1Password vault.
+4. Run `pnpm install` then `pnpm dev` to start the local server on http://localhost:3000.
 
 ACCESS REQUESTS
 ---------------
-[TODO: How does a new joiner get access to the production environment?]
-[TODO: How does a new joiner get access to the staging environment?]
-[TODO: Who approves access requests and how long does it take?]
-[TODO: What systems need SSO / Okta setup first?]
+Staging access: request in #orbit-eng; granted by the Tech Lead, usually same day.
+Production access: request from the Engineering Manager; requires SSO (Okta) set up first.
+1Password vault access: ask your Tech Lead on your first day.
 
 FIRST PULL REQUEST
 ------------------
-[TODO: Where is the contribution guide?]
-[TODO: How many reviewers are needed to merge a PR?]
-[TODO: Is there a branch naming convention?]
-[TODO: What CI checks must pass before merging?]
-
-SECRETS AND CREDENTIALS
------------------------
-[TODO: Where are secrets stored — e.g. 1Password, AWS Secrets Manager, Vault?]
-[TODO: Who grants access to the secrets store?]
+Branch naming: feature/<short-name> or fix/<short-name>.
+Open a PR into `main`. At least one approval from a senior engineer is required to merge.
+All CI checks (lint, test, build) must pass before merging.
+Keep PRs under 400 changed lines where possible.

@@ -1,32 +1,35 @@
-[Product Name] — Product Manual
-=================================
-
-[TODO: Replace this file with your real product documentation]
+Brightdesk — Product Manual
+===========================
 
 GETTING STARTED
 ---------------
-[TODO: How does a new user create an account or log in for the first time?]
-[TODO: What are the system requirements or supported browsers/platforms?]
+To create an account, go to app.brightdesk.example.com and click "Sign up".
+Brightdesk works in the latest two versions of Chrome, Edge, Firefox, and Safari.
 
 ACCOUNT MANAGEMENT
 ------------------
-[TODO: How does a user reset their password?]
-[TODO: What are the password requirements?]
-[TODO: How does a user update their email address or profile?]
+To reset your password:
+1. Go to Settings > Security > Change Password.
+2. Enter your current password, then your new password twice.
+3. Click Save Changes.
+Password requirements: at least 12 characters, one uppercase letter, and one number.
+If you forgot your password, click "Forgot Password" on the login page; the reset link
+emails to your registered address and expires in 60 minutes.
 
 KEY FEATURES
 ------------
-[TODO: Describe your product's main feature #1 — what it does and how to use it]
-[TODO: Describe your product's main feature #2]
-[TODO: Describe your product's main feature #3]
+Tickets: incoming customer messages become tickets. Assign, tag, and set a priority.
+Macros: saved reply templates. Create them in Settings > Macros.
+Reports: see ticket volume, response time, and CSAT in the Reports tab.
 
 DATA AND EXPORTS
 ----------------
-[TODO: What file formats does the product support for import/export?]
-[TODO: Are there any file size or row count limits?]
-[TODO: How long do exports take for large datasets?]
+To export data, go to Reports > Export and choose CSV or PDF.
+Up to 10,000 rows download instantly. Larger exports are emailed to you within 2 hours.
+Exports are kept for 7 days in the Downloads section.
 
-INTEGRATIONS
-------------
-[TODO: What third-party tools or APIs does the product integrate with?]
-[TODO: How does a user connect an integration?]
+BILLING
+-------
+Your subscription renews automatically on the same date each month.
+To cancel, go to Settings > Billing > Cancel Subscription. Cancellation takes effect at the
+end of the current billing period; there are no refunds for partial months.

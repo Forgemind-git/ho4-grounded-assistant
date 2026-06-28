@@ -1,27 +1,20 @@
-[Organisation Name] — Escalation Guide
-========================================
-
-[TODO: Replace this file with your real escalation contacts and procedures]
+Data Protection — Escalation Guide
+==================================
 
 WHEN TO ESCALATE
 ----------------
-[TODO: List the conditions that require escalation — e.g. potential breach, request outside scope, ambiguous SOP situation]
+Escalate when: a situation is not covered by SOP-DPC-001, a potential breach is suspected,
+or a request would require transferring data outside the EU.
 
 ESCALATION CONTACTS
 -------------------
-[TODO: Who is the primary escalation contact for compliance questions? Name and role]
-[TODO: Who is the backup contact?]
-[TODO: What is the contact method — email, phone, ticketing system?]
-[TODO: What is the expected response time for an escalation?]
-
-REGULATORY CONTACTS
--------------------
-[TODO: Is there an external regulator that must be notified in certain situations?]
-[TODO: What is the regulator's contact information and notification method?]
-[TODO: What is the deadline for notifying the regulator?]
+Primary contact: the Data Protection Officer (DPO) — dpo@company.example.com.
+Backup contact: the CISO.
+For a suspected breach, contact the DPO immediately by phone, then email.
+Expected response time for an escalation: within 2 hours during business hours.
 
 ESCALATION PROCEDURE
 --------------------
-[TODO: Step 1 — e.g. Document the situation in the incident log]
-[TODO: Step 2 — e.g. Notify the primary contact within X hours]
-[TODO: Step 3 — e.g. Do not take further action until guidance is received]
+1. Document the situation in the Incident Register.
+2. Notify the DPO within the timeframe above.
+3. Do not take further action on the data until the DPO provides guidance.

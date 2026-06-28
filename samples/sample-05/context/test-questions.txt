@@ -1,23 +1,17 @@
-# Test Questions — Study Assistant
-# Use these to verify your assistant is working correctly after setup.
+Test Questions — Study Assistant
+Ask these inside your Claude Project to check it is grounded correctly.
 
-[TODO: Question 1 — a key definition from Chapter 1 of your notes]
-Expected: Clear explanation in student-friendly terms, citing Chapter 1
+1. What is the difference between supervised and unsupervised learning?
+   Expect: A clear contrast citing Chapter 1.
 
-[TODO: Question 2 — a comparison question covered in your notes, e.g. "What is the difference between X and Y?"]
-Expected: Contrast that pulls from your chapter notes, not general knowledge
+2. What is backpropagation?
+   Expect: Step 3 of training — computing each weight's contribution to the error (Chapter 2).
 
-[TODO: Question 3 — a past paper question from your past-paper-questions.txt]
-Expected: Answer that matches or closely follows your model answer
+3. How is precision different from recall?
+   Expect: Precision = TP/(TP+FP); Recall = TP/(TP+FN), with plain-English meaning (Chapter 3).
 
-[TODO: Question 4 — a topic NOT in your chapter notes at all]
-Expected: "That topic isn't covered in the current chapter notes. I'd recommend checking the full textbook or asking your lecturer."
+4. What does ReLU do?
+   Expect: Outputs max(0, x); adds non-linearity (Chapter 2).
 
-[TODO: Question 5 — a tricky edge case, e.g. a nuance the notes mention briefly]
-Expected: [TODO: what should the answer cover?]
-
----
-# Suggested questions to replace with your own:
-# What are the three types of market failure?
-# Explain the difference between monetary and fiscal policy.
-# What did the 2008 financial crisis reveal about regulatory gaps?
+5. Explain how transformers and attention work.
+   Expect: "That topic isn't covered in the current chapter notes..." (not in the notes).
