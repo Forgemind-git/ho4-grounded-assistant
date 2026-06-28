@@ -1,0 +1,32 @@
+[Product Name] — Product Manual
+=================================
+
+[TODO: Replace this file with your real product documentation]
+
+GETTING STARTED
+---------------
+[TODO: How does a new user create an account or log in for the first time?]
+[TODO: What are the system requirements or supported browsers/platforms?]
+
+ACCOUNT MANAGEMENT
+------------------
+[TODO: How does a user reset their password?]
+[TODO: What are the password requirements?]
+[TODO: How does a user update their email address or profile?]
+
+KEY FEATURES
+------------
+[TODO: Describe your product's main feature #1 — what it does and how to use it]
+[TODO: Describe your product's main feature #2]
+[TODO: Describe your product's main feature #3]
+
+DATA AND EXPORTS
+----------------
+[TODO: What file formats does the product support for import/export?]
+[TODO: Are there any file size or row count limits?]
+[TODO: How long do exports take for large datasets?]
+
+INTEGRATIONS
+------------
+[TODO: What third-party tools or APIs does the product integrate with?]
+[TODO: How does a user connect an integration?]

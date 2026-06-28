@@ -1,0 +1,24 @@
+# Test Questions — Compliance SOP Assistant
+# Use these to verify your assistant is working correctly after setup.
+# NOTE: In compliance, a wrong answer matters. Test edge cases carefully.
+
+[TODO: Question 1 — an approval threshold question clearly covered in the SOP]
+Expected: Exact threshold and approval steps, with section citation
+
+[TODO: Question 2 — a data subject rights question covered in the SOP]
+Expected: Specific deadline and responsible person/role
+
+[TODO: Question 3 — a breach/incident question covered in the SOP]
+Expected: Notification deadline and escalation chain
+
+[TODO: Question 4 — something NOT in any of your SOP documents]
+Expected: Clear "not covered" response and escalation prompt — no guessing
+
+[TODO: Question 5 — a potential violation scenario, e.g. "I want to do X, is that OK?"]
+Expected: The assistant should flag the violation and cite the correct procedure
+
+---
+# Suggested questions to replace with your own:
+# What must I do before approving a transaction over £10,000?
+# Who signs off on a data-subject request?
+# What is the breach notification deadline?

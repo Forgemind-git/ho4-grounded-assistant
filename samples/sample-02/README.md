@@ -1,62 +1,45 @@
-# Sample 02 — Product Support Assistant
+# HO4 Sample 2 — Product Docs Grounded Assistant
 
-**Domain:** SaaS product documentation
+## Your task
 
-A grounded Q&A assistant that answers user support questions using only the product documentation. Shows the difference between Claude giving generic SaaS advice (BEFORE) vs. citing the exact steps from your docs (AFTER).
+Support agents waste time digging through manuals mid-chat. Build an assistant grounded only in your product documentation.
 
-## Problem Statement
+## What you will build
 
-When users ask "How do I get an API key?" an ungrounded Claude will describe a generic process — but your product's steps, URL paths, and edge cases (like "the key is only shown once") are product-specific facts that must come from your actual docs. This sample shows how to ground Claude so it answers accurately using your documentation.
+A Claude Project that answers product support questions ONLY from your uploaded documentation — no invented features, no generic SaaS advice.
 
-## What's in this sample
+## Step-by-step
+
+1. Open claude.ai → click "Projects" → "New Project"
+2. Name it: "Product Support Assistant"
+3. Fill in the context files in the `context/` folder with your real product docs
+4. Upload all files from the `context/` folder into the Project
+5. Paste the contents of `context/instructions.txt` into the Project instructions field
+6. Test with the questions in `context/test-questions.txt`
+
+## What to do now
+
+1. **Fill in `context/product-manual.txt`** — core product features and how-to steps
+2. **Fill in `context/faq.txt`** — common questions and official answers
+3. **Fill in `context/troubleshooting-guide.txt`** — known errors and fixes
+4. **Edit `context/instructions.txt`** — update the TODO lines for your product
+5. **Fill in `context/test-questions.txt`** — write questions that cover and miss your docs
+
+## Files in this sample
 
 ```
 sample-02/
-├── grounded_qa.py       # Main script — runs BEFORE and AFTER demo
-├── test_questions.txt   # 6 support questions to test the assistant
-├── requirements.txt     # anthropic
-├── .env.example         # Copy to .env and add your API key
+├── README.md                          ← You are here
 └── context/
-    ├── policy.txt       # Acme SaaS product documentation
-    └── instructions.txt # System instructions grounding Claude to the docs
+    ├── product-manual.txt             ← TODO: add product features and instructions
+    ├── faq.txt                        ← TODO: add frequently asked questions
+    ├── troubleshooting-guide.txt      ← TODO: add error codes and fixes
+    ├── instructions.txt               ← TODO: edit for your product
+    └── test-questions.txt             ← TODO: add your test questions
 ```
 
-## Quick start
+## Success criteria
 
-```bash
-cd samples/sample-02
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
-export ANTHROPIC_API_KEY=your_key_here
-python grounded_qa.py
-```
-
-## Expected output
-
-```
-QUESTION 3: How do I get an API key?
-
-[BEFORE] Without product documentation (Claude guesses generically):
-  To get an API key, you typically need to navigate to your account
-  settings or developer portal. Look for an "API" or "Developer" section...
-
-[AFTER]  With product documentation loaded:
-  To get an API key in Acme SaaS:
-  1. Go to Settings > Integrations > API Keys.
-  2. Click Generate New Key.
-  3. Copy the key immediately — it is shown only once and cannot be
-     retrieved again.
-  4. Store it securely (e.g. in an environment variable or secrets manager).
-```
-
-## How to extend this
-
-1. Replace `context/policy.txt` with your actual product help docs.
-2. Add more files to `context/` (e.g. `billing.txt`, `troubleshooting.txt`).
-3. Update `test_questions.txt` with real questions from your support tickets.
-4. Adjust `context/instructions.txt` to match your product name and support email.
-
-## Key concept demonstrated
-
-**Grounding** forces Claude to answer from your specific documentation rather than generic software knowledge. Critical product details — exact navigation paths, one-time actions, processing times — only appear correctly when the model has the actual source.
+- Questions covered by the docs get step-by-step, cited answers
+- Questions NOT in the docs get: "I don't have that information in my knowledge base."
+- No invented UI flows or features

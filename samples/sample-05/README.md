@@ -1,69 +1,45 @@
-# Sample 05 — Study Assistant
+# HO4 Sample 5 — Study Grounded Assistant
 
-**Domain:** Course study materials and syllabus
+## Your task
 
-A grounded Q&A assistant that helps students study using only the provided course notes. Shows the difference between Claude drawing on its full ML knowledge (BEFORE — potentially overwhelming) vs. explaining concepts strictly from the current chapter notes (AFTER — scoped to the syllabus).
+You are a student revising from a syllabus and dense readings. Build a study assistant grounded only in your course materials.
 
-## Problem Statement
+## What you will build
 
-When a student in an intro ML course asks "What is backpropagation?" an ungrounded Claude may explain autodiff, computational graphs, and advanced optimisers — far beyond what Chapter 2 covers. The grounded version explains it in the terms and depth of the actual course notes, which is what the student needs for their exam. This sample shows how to scope an AI tutor to the curriculum.
+A Claude Project that answers revision questions ONLY from your uploaded course materials — no concepts beyond what was taught, no outside knowledge.
 
-## What's in this sample
+## Step-by-step
+
+1. Open claude.ai → click "Projects" → "New Project"
+2. Name it: "[Course Name] Study Assistant"
+3. Fill in the context files in the `context/` folder with your real course materials
+4. Upload all files from the `context/` folder into the Project
+5. Paste the contents of `context/instructions.txt` into the Project instructions field
+6. Test with the questions in `context/test-questions.txt`
+
+## What to do now
+
+1. **Fill in `context/syllabus.txt`** — the official course syllabus (topics, weeks, learning objectives)
+2. **Fill in `context/chapter-notes.txt`** — your study notes or lecture summaries
+3. **Fill in `context/past-paper-questions.txt`** — past exam questions and model answers
+4. **Edit `context/instructions.txt`** — update the TODO lines for your course
+5. **Fill in `context/test-questions.txt`** — write questions to test the assistant covers your syllabus
+
+## Files in this sample
 
 ```
 sample-05/
-├── grounded_qa.py       # Main script — runs BEFORE and AFTER demo
-├── test_questions.txt   # 6 study questions to test the assistant
-├── requirements.txt     # anthropic
-├── .env.example         # Copy to .env and add your API key
+├── README.md                          ← You are here
 └── context/
-    ├── policy.txt       # ML101 course notes: Chapters 1-3
-    └── instructions.txt # System instructions scoping Claude to the syllabus
+    ├── syllabus.txt                   ← TODO: course topics and learning objectives
+    ├── chapter-notes.txt              ← TODO: your lecture notes and summaries
+    ├── past-paper-questions.txt       ← TODO: past exam questions and answers
+    ├── instructions.txt               ← TODO: edit for your course
+    └── test-questions.txt             ← TODO: add revision test questions
 ```
 
-## Quick start
+## Success criteria
 
-```bash
-cd samples/sample-05
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
-export ANTHROPIC_API_KEY=your_key_here
-python grounded_qa.py
-```
-
-## Expected output
-
-```
-QUESTION 3: How is precision different from recall?
-
-[BEFORE] Without course notes (Claude draws on its full ML knowledge):
-  Precision and recall are two fundamental metrics in information
-  retrieval and classification. Precision measures the accuracy of
-  positive predictions: TP/(TP+FP). It answers "when the model
-  predicts positive, how often is it right?" Recall (also called
-  sensitivity or true positive rate) measures coverage: TP/(TP+FN)...
-
-[AFTER]  With course study materials loaded (stays within the syllabus):
-  Chapter 3 of your course notes explains it this way:
-
-  Precision = TP / (TP + FP) — of all the samples the model predicted
-  as positive, how many were actually positive? High precision = few
-  false alarms.
-
-  Recall = TP / (TP + FN) — of all the samples that were actually
-  positive, how many did the model find? High recall = few missed cases.
-
-  The F1 Score combines both: 2 * (Precision * Recall) / (Precision + Recall).
-```
-
-## How to extend this
-
-1. Replace `context/policy.txt` with your actual course notes or lecture slides (converted to text).
-2. Add one file per chapter: `context/chapter1.txt`, `context/chapter2.txt`.
-3. Update `test_questions.txt` with questions from past exams or practice sheets.
-4. Add more chapters as the course progresses — the assistant automatically stays within what's loaded.
-
-## Key concept demonstrated
-
-**Grounding controls the scope of answers.** For a study tool, an all-knowing AI is less useful than one constrained to the curriculum. The grounded version helps students revise what they were actually taught — not what exists in the wider field.
+- Questions on syllabus topics get clear, chapter-cited explanations
+- Questions outside the course notes redirect to the textbook or lecturer
+- Answers use student-friendly language, not just copied definitions

@@ -1,0 +1,21 @@
+[Company Name] Leave Policy
+===========================
+
+[TODO: Replace this file with your company's real leave policy]
+
+ANNUAL LEAVE
+------------
+[TODO: How many days of annual leave are employees entitled to per year?]
+[TODO: How far in advance must leave be requested?]
+[TODO: Can unused leave be carried forward? If so, how many days and for how long?]
+[TODO: What happens if an employee exceeds their leave entitlement?]
+
+SICK LEAVE
+----------
+[TODO: How many days of paid sick leave are employees entitled to per year?]
+[TODO: When is a medical certificate required?]
+[TODO: Does sick leave carry forward to the next year?]
+
+OTHER LEAVE TYPES
+-----------------
+[TODO: Add any other leave types relevant to your organisation — e.g. parental leave, study leave, compassionate leave]

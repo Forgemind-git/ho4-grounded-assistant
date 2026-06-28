@@ -1,0 +1,23 @@
+# Test Questions — Team Onboarding Buddy
+# Use these to verify your assistant is working correctly after setup.
+
+[TODO: Question 1 — an access/setup question that IS in the runbook]
+Expected: Step-by-step answer citing the setup runbook
+
+[TODO: Question 2 — a "who do I contact" question covered in the team wiki]
+Expected: Specific name, role, or Slack channel from the wiki
+
+[TODO: Question 3 — a ceremony/meeting question covered in the team wiki]
+Expected: Day, time, and location of the meeting
+
+[TODO: Question 4 — something NOT in any of your docs]
+Expected: Redirect to the team's main Slack channel or team lead
+
+[TODO: Question 5 — a tools question covered in the tools guide]
+Expected: Specific tool name and how to get access
+
+---
+# Suggested questions to replace with your own:
+# How do I get access to the staging environment?
+# Who do I contact for design reviews?
+# Where are sprint ceremonies held?

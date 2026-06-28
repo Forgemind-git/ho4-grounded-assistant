@@ -1,62 +1,45 @@
-# Sample 03 — Team Onboarding Buddy
+# HO4 Sample 3 — Team Onboarding Grounded Assistant
 
-**Domain:** Team wiki and runbooks
+## Your task
 
-A grounded Q&A assistant that helps new engineers get answers from the team wiki — not from generic internet knowledge. Shows the difference between Claude guessing a generic process (BEFORE) vs. giving the actual team-specific steps (AFTER).
+New joiners ask the same setup questions for weeks. Build an onboarding buddy grounded only in your team wiki and runbooks.
 
-## Problem Statement
+## What you will build
 
-When a new engineer asks "How do I deploy to staging?" they need the team's specific command sequence, timing, and monitoring channel — not a generic CI/CD tutorial. An ungrounded LLM will invent plausible but wrong details. This sample shows how to ground Claude in your team wiki so it gives answers your team can actually use on day one.
+A Claude Project that answers new-joiner questions ONLY from your team's actual wiki and runbooks — no guessing about tools, processes, or people.
 
-## What's in this sample
+## Step-by-step
+
+1. Open claude.ai → click "Projects" → "New Project"
+2. Name it: "Team Onboarding Buddy"
+3. Fill in the context files in the `context/` folder with your real team docs
+4. Upload all files from the `context/` folder into the Project
+5. Paste the contents of `context/instructions.txt` into the Project instructions field
+6. Test with the questions in `context/test-questions.txt`
+
+## What to do now
+
+1. **Fill in `context/team-wiki.txt`** — team structure, key contacts, channels, norms
+2. **Fill in `context/setup-runbook.txt`** — environment setup steps and access requests
+3. **Fill in `context/tools-guide.txt`** — which tools you use and how to use them
+4. **Edit `context/instructions.txt`** — update the TODO lines for your team
+5. **Fill in `context/test-questions.txt`** — write questions a new joiner would actually ask
+
+## Files in this sample
 
 ```
 sample-03/
-├── grounded_qa.py       # Main script — runs BEFORE and AFTER demo
-├── test_questions.txt   # 6 onboarding questions to test the assistant
-├── requirements.txt     # anthropic
-├── .env.example         # Copy to .env and add your API key
+├── README.md                      ← You are here
 └── context/
-    ├── policy.txt       # Engineering team wiki and runbooks
-    └── instructions.txt # System instructions grounding Claude to the wiki
+    ├── team-wiki.txt              ← TODO: team structure, contacts, channels
+    ├── setup-runbook.txt          ← TODO: environment setup and access steps
+    ├── tools-guide.txt            ← TODO: tools, logins, how-tos
+    ├── instructions.txt           ← TODO: edit for your team
+    └── test-questions.txt         ← TODO: add real new-joiner questions
 ```
 
-## Quick start
+## Success criteria
 
-```bash
-cd samples/sample-03
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
-export ANTHROPIC_API_KEY=your_key_here
-python grounded_qa.py
-```
-
-## Expected output
-
-```
-QUESTION 2: Where are the database credentials?
-
-[BEFORE] Without team wiki (Claude gives generic engineering advice):
-  Database credentials should never be hardcoded. They are typically
-  stored in environment variables or a secrets manager like AWS Secrets
-  Manager, HashiCorp Vault, or a .env file...
-
-[AFTER]  With team wiki and runbooks loaded:
-  According to the Database Access runbook, connect using TablePlus
-  (preferred) or psql. Credentials are stored in the team 1Password
-  vault under "Dev DB". Ask your team lead for vault access on your
-  first day. Production DB requires a separate "Prod DB" entry — request
-  from the CTO.
-```
-
-## How to extend this
-
-1. Replace `context/policy.txt` with your actual team wiki pages.
-2. Add separate files per topic: `context/deployments.txt`, `context/oncall.txt`, `context/tools.txt`.
-3. Update `test_questions.txt` with questions your new joiners actually ask.
-4. The assistant will always point to your real Slack channels, tools, and people — not hypothetical ones.
-
-## Key concept demonstrated
-
-**Grounding** is critical for internal tools where the "right answer" is team-specific. Generic LLM knowledge produces plausible but wrong details. The grounded version cites your actual tool names, hosts, vaults, and channel names.
+- Setup and access questions get specific, step-by-step answers
+- "Who do I ask about X?" questions cite the right person or channel
+- Questions not in the docs redirect to the right Slack channel or team lead

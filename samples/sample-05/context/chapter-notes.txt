@@ -1,0 +1,30 @@
+[Course Name] — Chapter Notes
+==============================
+
+[TODO: Replace this file with your real lecture notes or chapter summaries]
+
+CHAPTER 1: [TODO: Chapter title]
+----------------------------------
+[TODO: Key concept 1 — definition in your own words]
+[TODO: Key concept 2 — definition in your own words]
+[TODO: Key formula or model — what it is and what each part means]
+[TODO: Example that illustrates the main concept]
+
+CHAPTER 2: [TODO: Chapter title]
+----------------------------------
+[TODO: Key concept 1]
+[TODO: Key concept 2]
+[TODO: How does this chapter relate to chapter 1?]
+
+CHAPTER 3: [TODO: Chapter title]
+----------------------------------
+[TODO: Key concept 1]
+[TODO: Key concept 2]
+[TODO: Common misconceptions about this topic]
+
+[TODO: Add as many chapters as your course has]
+
+IMPORTANT DEFINITIONS SUMMARY
+------------------------------
+[TODO: List the 5–10 most important definitions in the course, one per line]
+[TODO: These are what you most need the assistant to be able to explain]

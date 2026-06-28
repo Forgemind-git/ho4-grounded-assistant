@@ -1,0 +1,24 @@
+[Company Name] Expense Policy
+==============================
+
+[TODO: Replace this file with your company's real expense policy]
+
+EXPENSE CLAIMS
+--------------
+[TODO: What is the deadline to submit an expense claim after the expense date?]
+[TODO: What is the minimum amount that requires a receipt?]
+[TODO: What is the amount threshold that requires manager pre-approval?]
+[TODO: What is the mileage reimbursement rate for business travel?]
+[TODO: Who must approve international travel expenses?]
+
+APPROVED EXPENSE CATEGORIES
+----------------------------
+[TODO: List the categories of expenses that are approved — e.g. meals, transport, accommodation, training materials]
+
+NON-REIMBURSABLE EXPENSES
+--------------------------
+[TODO: List expenses that are NOT reimbursable — e.g. personal subscriptions, gym membership]
+
+ENTERTAINMENT EXPENSES
+-----------------------
+[TODO: Are client dinners or team events reimbursable? What documentation is required?]

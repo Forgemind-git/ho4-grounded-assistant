@@ -1,0 +1,21 @@
+[Product Name] — Frequently Asked Questions
+=============================================
+
+[TODO: Replace this file with your real FAQ content]
+
+Q: [TODO: Most common question your support team receives]
+A: [TODO: Official answer]
+
+Q: [TODO: Second most common question]
+A: [TODO: Official answer]
+
+Q: [TODO: Question about billing or subscription]
+A: [TODO: Official answer]
+
+Q: [TODO: Question about data or privacy]
+A: [TODO: Official answer]
+
+Q: [TODO: Question about limits or quotas]
+A: [TODO: Official answer]
+
+[TODO: Add as many Q&A pairs as your support team needs]

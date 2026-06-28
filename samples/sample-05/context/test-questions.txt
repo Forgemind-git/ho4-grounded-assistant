@@ -1,0 +1,23 @@
+# Test Questions — Study Assistant
+# Use these to verify your assistant is working correctly after setup.
+
+[TODO: Question 1 — a key definition from Chapter 1 of your notes]
+Expected: Clear explanation in student-friendly terms, citing Chapter 1
+
+[TODO: Question 2 — a comparison question covered in your notes, e.g. "What is the difference between X and Y?"]
+Expected: Contrast that pulls from your chapter notes, not general knowledge
+
+[TODO: Question 3 — a past paper question from your past-paper-questions.txt]
+Expected: Answer that matches or closely follows your model answer
+
+[TODO: Question 4 — a topic NOT in your chapter notes at all]
+Expected: "That topic isn't covered in the current chapter notes. I'd recommend checking the full textbook or asking your lecturer."
+
+[TODO: Question 5 — a tricky edge case, e.g. a nuance the notes mention briefly]
+Expected: [TODO: what should the answer cover?]
+
+---
+# Suggested questions to replace with your own:
+# What are the three types of market failure?
+# Explain the difference between monetary and fiscal policy.
+# What did the 2008 financial crisis reveal about regulatory gaps?

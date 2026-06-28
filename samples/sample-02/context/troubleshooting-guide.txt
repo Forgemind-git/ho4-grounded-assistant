@@ -1,0 +1,24 @@
+[Product Name] — Troubleshooting Guide
+========================================
+
+[TODO: Replace this file with your real troubleshooting documentation]
+
+ERROR: [TODO: Most common error message your users see]
+Cause: [TODO: What causes this error?]
+Fix: [TODO: Step-by-step resolution]
+
+ERROR: [TODO: Second most common error]
+Cause: [TODO: What causes this error?]
+Fix: [TODO: Step-by-step resolution]
+
+ISSUE: [TODO: Common performance or loading problem]
+Cause: [TODO: What causes this issue?]
+Fix: [TODO: What should the user try?]
+
+ISSUE: [TODO: Common integration or connection problem]
+Cause: [TODO: What causes this issue?]
+Fix: [TODO: Step-by-step resolution]
+
+ESCALATION
+----------
+[TODO: When should a user contact support vs. self-serve? What is the support email or link?]

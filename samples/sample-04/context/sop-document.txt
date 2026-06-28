@@ -1,0 +1,35 @@
+[Organisation Name] — Standard Operating Procedure
+====================================================
+
+[TODO: Replace this file with your real SOP document]
+[TODO: Include the SOP reference number and version — e.g. SOP-DPC-001 v2.3]
+
+SCOPE
+-----
+[TODO: What processes or activities does this SOP cover?]
+[TODO: Who does this SOP apply to?]
+
+DATA HANDLING
+-------------
+[TODO: What categories of data are covered by this SOP?]
+[TODO: Where is data permitted to be stored — e.g. approved regions or systems only?]
+[TODO: Who is authorised to access personal or sensitive data?]
+[TODO: What must be done before transferring data to a third party?]
+
+TRANSACTION / APPROVAL RULES
+-----------------------------
+[TODO: What thresholds require additional approvals? e.g. transactions over a certain amount]
+[TODO: Who is authorised to approve transactions at each threshold?]
+[TODO: What documentation must be completed before approval?]
+
+BREACH AND INCIDENT PROCEDURES
+-------------------------------
+[TODO: What constitutes a reportable incident or breach under this SOP?]
+[TODO: What is the notification deadline after discovering a breach?]
+[TODO: Who must be notified internally? Who must be notified externally?]
+
+DATA SUBJECT RIGHTS
+-------------------
+[TODO: What rights do data subjects have under this SOP?]
+[TODO: Who is responsible for handling data subject requests?]
+[TODO: What is the response deadline for a data subject request?]

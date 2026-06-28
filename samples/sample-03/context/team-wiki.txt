@@ -1,0 +1,31 @@
+[Team Name] — Team Wiki
+========================
+
+[TODO: Replace this file with your team's real wiki content]
+
+TEAM STRUCTURE
+--------------
+[TODO: Who are the key people on the team? List names/roles]
+[TODO: Who is the team lead or engineering manager?]
+[TODO: Who handles design reviews?]
+[TODO: Who handles security reviews?]
+
+SLACK CHANNELS
+--------------
+[TODO: List the main Slack channels and what each is used for]
+[TODO: Where should a new joiner introduce themselves?]
+[TODO: What channel is used for incidents?]
+[TODO: What channel is used for deployments?]
+
+CEREMONIES / MEETINGS
+---------------------
+[TODO: When is the daily standup? Where is it held (Zoom / in-person)?]
+[TODO: When is the sprint planning meeting?]
+[TODO: When is retrospective?]
+[TODO: Are there any async ceremonies — e.g. a weekly written update?]
+
+TEAM NORMS
+----------
+[TODO: What are the team's working hours expectations?]
+[TODO: What is the code review SLA — how quickly should you review PRs?]
+[TODO: Any on-call rotation details?]

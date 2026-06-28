@@ -1,0 +1,23 @@
+# Test Questions — Product Support Assistant
+# Use these to verify your assistant is working correctly after setup.
+
+[TODO: Question 1 — something clearly covered in your product manual]
+Expected: A step-by-step answer citing the manual section
+
+[TODO: Question 2 — something covered in your FAQ]
+Expected: The exact FAQ answer
+
+[TODO: Question 3 — a troubleshooting question covered in the guide]
+Expected: The listed cause and fix steps
+
+[TODO: Question 4 — something NOT in any of your docs]
+Expected: "I don't have that information in my knowledge base. Please contact our support team for assistance."
+
+[TODO: Question 5 — an edge case, e.g. a feature your product doesn't have]
+Expected: Clear "not available" response, no guessing
+
+---
+# Suggested questions to replace with your own:
+# How do I reset my password?
+# What file formats are supported?
+# Why is my export failing?

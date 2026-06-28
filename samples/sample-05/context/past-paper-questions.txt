@@ -1,0 +1,34 @@
+[Course Name] — Past Paper Questions
+======================================
+
+[TODO: Replace this file with real past exam questions and model answers]
+[TODO: Source: past papers are usually available from your institution's library or course page]
+
+EXAM YEAR: [TODO: e.g. 2023]
+------------------------------
+
+Question 1: [TODO: Paste a past exam question here]
+Model Answer: [TODO: Paste or write a model answer — key points only, not essay length]
+Marks: [TODO: How many marks is this question worth?]
+
+Question 2: [TODO: Paste a past exam question here]
+Model Answer: [TODO: Model answer]
+Marks: [TODO]
+
+Question 3: [TODO: Paste a past exam question here]
+Model Answer: [TODO: Model answer]
+Marks: [TODO]
+
+EXAM YEAR: [TODO: e.g. 2022]
+------------------------------
+
+Question 1: [TODO]
+Model Answer: [TODO]
+Marks: [TODO]
+
+[TODO: Add more years and questions as available]
+
+COMMON EXAM THEMES
+------------------
+[TODO: Based on past papers, what topics come up most often?]
+[TODO: What question formats are used — essay, calculation, short answer?]

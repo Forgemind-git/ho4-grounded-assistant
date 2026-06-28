@@ -1,0 +1,34 @@
+[Team Name] — Tools Guide
+==========================
+
+[TODO: Replace this file with your team's real tools and how-tos]
+
+PROJECT MANAGEMENT
+------------------
+[TODO: What tool does the team use for task tracking? e.g. Jira, Linear, GitHub Issues]
+[TODO: Where is the current sprint board?]
+[TODO: How does a new joiner get added to the board?]
+
+CODE AND DEPLOYMENT
+-------------------
+[TODO: What is the main code repository? e.g. GitHub org, GitLab group]
+[TODO: What CI/CD tool is used? e.g. GitHub Actions, CircleCI, Jenkins]
+[TODO: How does deployment to staging work?]
+[TODO: How does deployment to production work?]
+
+COMMUNICATION
+-------------
+[TODO: What is the primary communication tool? e.g. Slack, Teams]
+[TODO: What video call tool is used for meetings?]
+[TODO: Is there a shared calendar? Where is it?]
+
+DOCUMENTATION
+-------------
+[TODO: Where does the team store documentation? e.g. Confluence, Notion, GitHub Wiki]
+[TODO: Where is the architecture decision record (ADR)?]
+[TODO: How does a new joiner get access to docs?]
+
+MONITORING AND ALERTS
+---------------------
+[TODO: What monitoring tool is used? e.g. Datadog, Grafana, PagerDuty]
+[TODO: How does a new joiner get added to the on-call rotation?]

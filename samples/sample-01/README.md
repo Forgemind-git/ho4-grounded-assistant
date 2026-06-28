@@ -1,62 +1,43 @@
-# Sample 01 — HR Policy Assistant
+# HO4 Sample 1 — HR Policy Grounded Assistant
 
-**Domain:** HR leave and expense policies
+## Your task
 
-A grounded Q&A assistant that answers employee questions using only the company HR policy documents. Shows the difference between Claude guessing from general knowledge (BEFORE) vs. citing the actual policy (AFTER).
+Your HR inbox keeps getting the same leave and expense questions. Build an assistant grounded only in your HR policy document — no guessing allowed.
 
-## Problem Statement
+## What you will build
 
-When employees ask HR questions like "Can I carry over leave?" or "Do I need a receipt for lunch?", an ungrounded LLM will guess based on generic HR norms — which may be wrong for your company. This sample shows how to ground Claude in your specific policy documents so every answer traces back to a real rule.
+A Claude Project that answers employee HR questions ONLY from the documents you upload — no generic HR advice, no invented rules.
 
-## What's in this sample
+## Step-by-step
+
+1. Open claude.ai → click "Projects" → "New Project"
+2. Name it: "HR Policy Assistant"
+3. Fill in the context files in the `context/` folder with your real HR policy content
+4. Upload all files from the `context/` folder into the Project
+5. Paste the contents of `context/instructions.txt` into the Project instructions field
+6. Test with the questions in `context/test-questions.txt`
+
+## What to do now
+
+1. **Fill in `context/leave-policy.txt`** — your company's actual leave entitlements
+2. **Fill in `context/expense-policy.txt`** — your company's expense rules and limits
+3. **Fill in `context/instructions.txt`** — edit the TODO lines to match your domain
+4. **Fill in `context/test-questions.txt`** — write 3–5 questions that test your assistant
+
+## Files in this sample
 
 ```
 sample-01/
-├── grounded_qa.py       # Main script — runs BEFORE and AFTER demo
-├── test_questions.txt   # 6 questions to test the assistant
-├── requirements.txt     # anthropic
-├── .env.example         # Copy to .env and add your API key
+├── README.md                      ← You are here
 └── context/
-    ├── policy.txt       # ACME Corp HR leave and expense policy
-    └── instructions.txt # System instructions grounding Claude to the docs
+    ├── leave-policy.txt           ← TODO: add your leave policy content
+    ├── expense-policy.txt         ← TODO: add your expense rules
+    ├── instructions.txt           ← TODO: edit to match your company
+    └── test-questions.txt         ← TODO: add your test questions
 ```
 
-## Quick start
+## Success criteria
 
-```bash
-cd samples/sample-01
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
-export ANTHROPIC_API_KEY=your_key_here
-python grounded_qa.py
-```
-
-## Expected output
-
-For each test question you will see two answers side by side:
-
-```
-QUESTION 1: How many days annual leave do I get?
-
-[BEFORE] Without company context (Claude guesses from general knowledge):
-  The typical standard in many companies is around 10–15 days of paid
-  annual leave, but this varies widely by employer and country...
-
-[AFTER]  With HR policy documents loaded:
-  According to the ACME Corp HR Policy, you are entitled to 18 days of
-  paid annual leave per calendar year. [policy.txt — Annual Leave]
-```
-
-The BEFORE answer is a generic guess. The AFTER answer cites the exact rule from the loaded document.
-
-## How to extend this
-
-1. Replace `context/policy.txt` with your real HR policy document.
-2. Adjust `context/instructions.txt` to match your company's tone.
-3. Add more `.txt` files to `context/` (e.g. `benefits.txt`, `code_of_conduct.txt`) — the script loads all of them automatically.
-4. Update `test_questions.txt` with questions your employees actually ask.
-
-## Key concept demonstrated
-
-**Grounding** = loading authoritative documents into the system prompt so Claude answers from facts, not guesses. The model cannot contradict the context or hallucinate policies that aren't there.
+- Questions covered by the policy get specific, cited answers
+- Questions NOT in the policy get: "I don't have that information in my knowledge base."
+- No made-up rules or generic HR advice

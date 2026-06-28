@@ -1,6 +1,2 @@
-Can I store customer data on a US server?
-How long do I have to delete data after a deletion request?
-Who can access personal data?
-When must I report a security incident?
-How long must audit logs be kept?
-Do I need approval to transfer data to a partner in Canada?
+# Test questions have moved
+# See context/test-questions.txt

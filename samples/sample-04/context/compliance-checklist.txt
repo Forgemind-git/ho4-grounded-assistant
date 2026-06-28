@@ -1,0 +1,25 @@
+[Organisation Name] — Compliance Checklists
+=============================================
+
+[TODO: Replace this file with your real compliance checklists]
+
+CHECKLIST: [TODO: Name of Process 1 — e.g. Data Subject Access Request]
+-------------------------------------------------------------------------
+[ ] [TODO: Step 1 — e.g. Log the request in the case management system]
+[ ] [TODO: Step 2 — e.g. Verify the identity of the requester]
+[ ] [TODO: Step 3 — e.g. Retrieve all relevant personal data within the deadline]
+[ ] [TODO: Step 4 — e.g. Redact third-party data before responding]
+[ ] [TODO: Step 5 — e.g. Send the response and close the case]
+
+CHECKLIST: [TODO: Name of Process 2 — e.g. High-Value Transaction Approval]
+-----------------------------------------------------------------------------
+[ ] [TODO: Step 1]
+[ ] [TODO: Step 2]
+[ ] [TODO: Step 3]
+[ ] [TODO: Step 4]
+
+CHECKLIST: [TODO: Name of Process 3 — e.g. Security Incident Response]
+------------------------------------------------------------------------
+[ ] [TODO: Step 1]
+[ ] [TODO: Step 2]
+[ ] [TODO: Step 3]
