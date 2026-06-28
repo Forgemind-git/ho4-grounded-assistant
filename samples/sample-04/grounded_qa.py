@@ -7,6 +7,11 @@ vs. grounding it in the organisation's Standard Operating Procedure (AFTER).
 Compliance answers MUST come from the actual SOP document — not from Claude's
 general knowledge of GDPR or data protection law. This demo shows the difference.
 
+OPTIONAL / ADVANCED — you do NOT need this for the course.
+The hands-on uses your Claude.ai subscription (Claude Projects) — no API key.
+This script is automation for developers and needs an ANTHROPIC_API_KEY,
+which is separate from your Claude.ai subscription and costs money.
+
 Usage:
     pip install anthropic
     export ANTHROPIC_API_KEY=your_key_here

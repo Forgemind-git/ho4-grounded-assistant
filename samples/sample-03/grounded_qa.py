@@ -7,6 +7,11 @@ vs. grounding it in the team wiki and runbooks (AFTER).
 A new engineer can ask "How do I deploy to staging?" and the grounded
 assistant will give the exact team process — not a generic answer.
 
+OPTIONAL / ADVANCED — you do NOT need this for the course.
+The hands-on uses your Claude.ai subscription (Claude Projects) — no API key.
+This script is automation for developers and needs an ANTHROPIC_API_KEY,
+which is separate from your Claude.ai subscription and costs money.
+
 Usage:
     pip install anthropic
     export ANTHROPIC_API_KEY=your_key_here

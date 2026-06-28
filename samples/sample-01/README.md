@@ -1,62 +1,70 @@
-# Sample 01 — HR Policy Assistant
+# HO4 Sample 1 — HR Policy Assistant
 
 **Domain:** HR leave and expense policies
 
-A grounded Q&A assistant that answers employee questions using only the company HR policy documents. Shows the difference between Claude guessing from general knowledge (BEFORE) vs. citing the actual policy (AFTER).
+A grounded Q&A assistant that answers employee questions using **only** the company HR policy
+documents. It shows the difference between Claude guessing from general knowledge (BEFORE) and
+citing the actual policy (AFTER) — so every answer traces back to a real rule, and questions
+the policy doesn't cover get an honest "I don't have that" instead of an invented one.
 
-## Problem Statement
+## Use it with your Claude.ai subscription
+No API key needed. Just your normal Claude.ai login (Projects is available on Claude Pro
+or Team). A richer click-by-click walkthrough is in this folder's **`index.html`** (open it in
+a browser).
 
-When employees ask HR questions like "Can I carry over leave?" or "Do I need a receipt for lunch?", an ungrounded LLM will guess based on generic HR norms — which may be wrong for your company. This sample shows how to ground Claude in your specific policy documents so every answer traces back to a real rule.
+1. Open **claude.ai** and sign in.
+2. In the left sidebar click **Projects**, then **+ New Project**. Name it `HR Policy Assistant`.
+3. Click **Add content** → **Upload files** and upload **`context/policy.txt`** from this folder.
+4. Click **Set project instructions** and paste the example prompt below. Click **Save**.
+5. Start a new chat **inside the project** and ask the questions in **`test_questions.txt`**.
+   Each answer should cite the specific policy rule; anything not in the policy should get the
+   "contact HR" reply.
 
-## What's in this sample
+## The example prompt
+Paste this into the Project's **instructions** field (it's the content of
+`context/instructions.txt`):
 
 ```
-sample-01/
-├── grounded_qa.py       # Main script — runs BEFORE and AFTER demo
-├── test_questions.txt   # 6 questions to test the assistant
-├── requirements.txt     # anthropic
-├── .env.example         # Copy to .env and add your API key
-└── context/
-    ├── policy.txt       # ACME Corp HR leave and expense policy
-    └── instructions.txt # System instructions grounding Claude to the docs
+You are an HR Policy Assistant for ACME Corp.
+
+You answer questions ONLY using the HR policy documents provided in your context.
+
+Rules you must follow:
+1. If the answer is in the context, give a clear, specific answer and cite the relevant policy section.
+2. If the answer is NOT in the context, say: "I don't have information about that in the current HR policy documents. Please contact HR directly for assistance."
+3. Never guess, invent, or use general HR knowledge not present in the provided documents.
+4. Keep answers concise and employee-friendly.
+5. Always quote or paraphrase the specific policy rule that supports your answer.
 ```
 
-## Quick start
+## Before vs after
+**Question:** "Do I need a receipt for a $20 lunch?"
+
+- **BEFORE (ungrounded):** "Most companies require receipts for business expenses, though the
+  threshold varies — often around $25–$75. Check your company's policy for the exact cutoff."
+  → generic, vague, possibly wrong for your company.
+- **AFTER (grounded):** "No — per the Expense Claims section, receipts are only required for
+  claims over $25, and $20 is under that threshold." → exact, cited, correct.
+
+## Make it your own
+- Replace `context/policy.txt` with your real HR policy document.
+- Adjust the company name and tone in the instructions.
+- Add more files to the Project (e.g. benefits, code of conduct) — the assistant uses all of them.
+
+## Optional — automate it with the API (advanced)
+You do **not** need this for the course. The `grounded_qa.py` script in this folder runs the
+same BEFORE/AFTER demo from Python. It needs an Anthropic API key (separate from your Claude.ai
+subscription, so it costs money) and is only for developers who want to script the pattern.
 
 ```bash
 cd samples/sample-01
 pip install -r requirements.txt
-cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
+cp .env.example .env          # add your ANTHROPIC_API_KEY
 export ANTHROPIC_API_KEY=your_key_here
 python grounded_qa.py
 ```
 
-## Expected output
-
-For each test question you will see two answers side by side:
-
-```
-QUESTION 1: How many days annual leave do I get?
-
-[BEFORE] Without company context (Claude guesses from general knowledge):
-  The typical standard in many companies is around 10–15 days of paid
-  annual leave, but this varies widely by employer and country...
-
-[AFTER]  With HR policy documents loaded:
-  According to the ACME Corp HR Policy, you are entitled to 18 days of
-  paid annual leave per calendar year. [policy.txt — Annual Leave]
-```
-
-The BEFORE answer is a generic guess. The AFTER answer cites the exact rule from the loaded document.
-
-## How to extend this
-
-1. Replace `context/policy.txt` with your real HR policy document.
-2. Adjust `context/instructions.txt` to match your company's tone.
-3. Add more `.txt` files to `context/` (e.g. `benefits.txt`, `code_of_conduct.txt`) — the script loads all of them automatically.
-4. Update `test_questions.txt` with questions your employees actually ask.
-
 ## Key concept demonstrated
-
-**Grounding** = loading authoritative documents into the system prompt so Claude answers from facts, not guesses. The model cannot contradict the context or hallucinate policies that aren't there.
+**Grounding** = giving Claude the authoritative documents (here, via a Project) so it answers
+from facts, not guesses. The model cannot contradict the context or hallucinate policies that
+aren't there.
