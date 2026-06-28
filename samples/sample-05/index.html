@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample 05 — Study Assistant · HO4</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#F8F9FA; color:#1a1a2e; }
+:root { --color:#D97706; }
+header { background:var(--color); color:#fff; padding:36px 32px 28px; }
+header .badge { font-size:12px; font-weight:700; letter-spacing:.08em; opacity:.8; text-transform:uppercase; margin-bottom:6px; }
+header h1 { font-size:26px; font-weight:800; margin-bottom:6px; }
+header p { font-size:14px; opacity:.85; max-width:640px; line-height:1.6; }
+.back { display:inline-flex; align-items:center; gap:6px; color:rgba(255,255,255,.8); text-decoration:none; font-size:13px; margin-bottom:14px; }
+.back:hover { color:#fff; }
+.content { max-width:860px; margin:0 auto; padding:32px 24px 60px; }
+.section { background:#fff; border-radius:10px; box-shadow:0 1px 6px rgba(0,0,0,.08); padding:28px 32px; margin-bottom:24px; }
+.section h2 { font-size:17px; font-weight:700; color:var(--color); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+.section h2 .step-num { background:var(--color); color:#fff; border-radius:50%; width:26px; height:26px; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0; }
+.section p { font-size:14px; line-height:1.7; color:#374151; margin-bottom:12px; }
+.section ul, .section ol { padding-left:20px; font-size:14px; color:#374151; line-height:1.8; margin-bottom:12px; }
+.code-block { background:#1e1e2e; color:#cdd6f4; border-radius:8px; padding:16px 20px; font-family:'Courier New',monospace; font-size:13px; line-height:1.7; position:relative; overflow-x:auto; margin:12px 0; white-space:pre-wrap; word-break:break-word; }
+.copy-btn { position:absolute; top:10px; right:12px; background:rgba(255,255,255,.15); color:#cdd6f4; border:none; border-radius:4px; padding:4px 10px; font-size:11px; cursor:pointer; }
+.copy-btn:hover { background:rgba(255,255,255,.25); }
+.file-item { border:1px solid #E5E7EB; border-radius:8px; margin-bottom:14px; overflow:hidden; }
+.file-header { background:#F3F4F6; padding:10px 16px; display:flex; justify-content:space-between; align-items:center; }
+.file-name { font-size:13px; font-weight:600; color:#374151; font-family:'Courier New',monospace; }
+.dl-btn { background:var(--color); color:#fff; border:none; border-radius:5px; padding:5px 12px; font-size:12px; font-weight:600; cursor:pointer; }
+.file-content { background:#1e1e2e; color:#cdd6f4; padding:14px 18px; font-family:'Courier New',monospace; font-size:12px; line-height:1.7; white-space:pre-wrap; max-height:260px; overflow-y:auto; }
+.q-list { list-style:none; padding:0; }
+.q-list li { background:#FFF7ED; border-left:3px solid var(--color); padding:10px 14px; margin-bottom:8px; border-radius:0 6px 6px 0; font-size:14px; color:#374151; font-style:italic; }
+.demo-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:4px; }
+.demo-box { border-radius:8px; padding:16px; font-size:13px; line-height:1.7; }
+.demo-without { background:#FEF2F2; border:1px solid #FECACA; }
+.demo-without h4 { color:#DC2626; margin-bottom:8px; font-size:13px; }
+.demo-with { background:#F0FDF4; border:1px solid #BBF7D0; }
+.demo-with h4 { color:#16A34A; margin-bottom:8px; font-size:13px; }
+.ref-box { background:#F8F9FA; border:1px solid #E5E7EB; border-radius:8px; padding:16px 20px; }
+.ref-box h3 { font-size:14px; font-weight:700; color:#6B7280; margin-bottom:8px; }
+.ref-box p { font-size:13px; color:#6B7280; line-height:1.6; }
+.tag { display:inline-block; background:#FEF3C7; color:#92400E; border-radius:4px; padding:2px 8px; font-size:11px; font-weight:600; margin-left:8px; }
+@media(max-width:600px){ .demo-grid{grid-template-columns:1fr;} .content{padding:20px 14px 40px;} .section{padding:20px 18px;} }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../" class="back">← Back to HO4</a>
+  <div class="badge">HO4 · Sample 05</div>
+  <h1>Study Assistant</h1>
+  <p>A Claude Project that helps students understand course material using only the provided study notes — explanations grounded in what was actually taught, not Claude's broader knowledge.</p>
+</header>
+
+<div class="content">
+
+  <div class="section">
+    <h2>The Problem</h2>
+    <p>Students ask Claude to help them study, but Claude answers from its full training knowledge — which may include concepts, algorithms, or terminology not yet taught in the course. This confuses students and diverges from what will actually appear on the exam.</p>
+    <p>This assistant answers from the course notes only. It explains concepts in student-friendly language, cites the chapter, and redirects to the lecturer when something isn't covered yet.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="step-num">1</span> Create a Claude Project</h2>
+    <ol>
+      <li>Go to <strong>claude.ai</strong> and sign in.</li>
+      <li>In the left sidebar, click <strong>+ New Project</strong>.</li>
+      <li>Name it: <code>Study Assistant — ML101</code></li>
+      <li>You'll land on the Project page where you upload docs and set instructions.</li>
+    </ol>
+    <p><strong>Note:</strong> Projects require a Claude Pro or Team subscription.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="step-num">2</span> Upload These Knowledge Files</h2>
+    <p>In your Project, click <strong>Add content</strong> → <strong>Upload files</strong>. Download and upload the file below.</p>
+
+    <div class="file-item">
+      <div class="file-header">
+        <span class="file-name">policy.txt</span>
+        <button class="dl-btn" onclick="downloadFile('policy.txt', document.getElementById('policy-content').textContent)">Download</button>
+      </div>
+      <div class="file-content" id="policy-content">Introduction to Machine Learning — Course Study Materials
+=========================================================
+Course Code: ML101 | Semester: Fall 2024
+
+CHAPTER 1: INTRODUCTION TO MACHINE LEARNING
+--------------------------------------------
+Machine learning (ML) is a branch of artificial intelligence where systems
+learn from data to make predictions or decisions without being explicitly
+programmed for each task.
+
+The three main paradigms of machine learning:
+
+1. Supervised Learning
+   - The model is trained on labelled data (each input has a known correct output).
+   - The goal is to learn a mapping from inputs to outputs.
+   - Examples: email spam detection, house price prediction, image classification.
+   - Common algorithms: linear regression, decision trees, support vector machines.
+
+2. Unsupervised Learning
+   - The model finds patterns in data without labels.
+   - The goal is to discover structure, groupings, or representations in the data.
+   - Examples: customer segmentation, topic modelling, anomaly detection.
+   - Common algorithms: k-means clustering, principal component analysis (PCA).
+
+3. Reinforcement Learning
+   - The model (called an agent) learns by interacting with an environment.
+   - The agent receives rewards for good actions and penalties for bad ones.
+   - The goal is to learn a policy that maximises cumulative reward over time.
+   - Examples: game-playing AI (chess, Go), robot navigation, recommendation systems.
+
+CHAPTER 2: NEURAL NETWORKS
+---------------------------
+A neural network is a model inspired by the structure of the human brain.
+
+Architecture:
+- Input layer: receives the raw features (e.g. pixel values, numbers).
+- Hidden layers: intermediate layers that learn abstract representations.
+- Output layer: produces the final prediction (e.g. a class label or a number).
+
+Activation functions:
+- Introduce non-linearity into the network, allowing it to learn complex patterns.
+- ReLU (Rectified Linear Unit): outputs max(0, x). Fast and commonly used in hidden layers.
+- Sigmoid: outputs a value between 0 and 1. Used in binary classification output layers.
+- Softmax: outputs a probability distribution over multiple classes.
+
+Training a neural network:
+1. Forward pass: input data flows through the network to produce a prediction.
+2. Loss calculation: the difference between the prediction and the true label is measured
+   using a loss function (e.g. cross-entropy loss for classification).
+3. Backpropagation: the gradient of the loss with respect to each weight is computed
+   by applying the chain rule backwards through the network.
+4. Weight update: weights are adjusted in the direction that reduces the loss
+   (gradient descent with a learning rate).
+
+CHAPTER 3: MODEL EVALUATION
+----------------------------
+Key metrics for evaluating classification models:
+
+Accuracy = (number of correct predictions) / (total number of predictions)
+         = (TP + TN) / (TP + TN + FP + FN)
+
+Precision = TP / (TP + FP)
+Measures: of all the samples the model predicted as positive, how many were actually positive?
+High precision means few false alarms.
+
+Recall (Sensitivity) = TP / (TP + FN)
+Measures: of all the samples that were actually positive, how many did the model find?
+High recall means few missed positives.
+
+F1 Score = 2 * (Precision * Recall) / (Precision + Recall)
+A balanced metric that combines precision and recall.
+
+TP = True Positive | TN = True Negative | FP = False Positive | FN = False Negative
+
+Overfitting vs Underfitting:
+- Overfitting: the model memorises the training data and performs well on training data
+  but poorly on new, unseen data. Signs: low training loss, high validation loss.
+  Fixes: more training data, dropout, regularisation (L1/L2), simpler model.
+- Underfitting: the model is too simple to capture the underlying patterns.
+  Signs: high training loss and high validation loss. Fix: more complex model, more training.
+
+Train/Validation/Test split:
+- Training set: used to train the model (typically 70–80% of data).
+- Validation set: used to tune hyperparameters and detect overfitting (10–15%).
+- Test set: used once at the end to measure final performance (10–15%).</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="step-num">3</span> Paste These System Instructions</h2>
+    <p>In your Project, click <strong>Edit project instructions</strong> and paste:</p>
+    <div class="code-block" id="instructions-block">You are a Study Assistant for the ML101 Introduction to Machine Learning course.
+
+You help students understand the course material by answering questions using ONLY the provided course study notes.
+
+Rules you must follow:
+1. If the answer is in the course notes, give a clear explanation in your own words that helps the student understand, and cite the chapter (e.g. "Chapter 2 explains...").
+2. If the answer is NOT in the course notes, say: "That topic isn't covered in the current chapter notes. I'd recommend checking the full textbook or asking your lecturer."
+3. Never introduce concepts, algorithms, or definitions not present in the provided study materials.
+4. Use simple, student-friendly language. When explaining formulas, give a plain-English interpretation as well.
+5. Encourage the student — learning ML takes time, and that's okay.<button class="copy-btn" onclick="copyBlock('instructions-block')">Copy</button></div>
+  </div>
+
+  <div class="section">
+    <h2><span class="step-num">4</span> Test It</h2>
+    <p>Start a new conversation inside the Project and try these questions:</p>
+    <ul class="q-list">
+      <li>What is the difference between supervised and unsupervised learning?</li>
+      <li>What is backpropagation?</li>
+      <li>How is precision different from recall?</li>
+      <li>What is overfitting?</li>
+      <li>What does ReLU do?</li>
+      <li>What is the F1 score?</li>
+    </ul>
+    <p><strong>Expected quality:</strong> Each answer cites the relevant chapter (e.g. "Chapter 3 explains…"), uses plain language for formulas, and stays within the course notes. If you ask about something not in the notes (e.g. transformers, LSTM), Claude should say it's not covered and point to the textbook or lecturer.</p>
+  </div>
+
+  <div class="section">
+    <h2>Before vs After Demo</h2>
+    <p><strong>Question:</strong> "What is overfitting?"</p>
+    <div class="demo-grid">
+      <div class="demo-box demo-without">
+        <h4>❌ Without Context (Claude going beyond notes)</h4>
+        <p>"Overfitting occurs when a model learns the training data too well, including noise. Common fixes include dropout, L1/L2 regularisation, early stopping, data augmentation, batch normalisation, and cross-validation. In transformers, attention dropout is particularly effective…"</p>
+        <p style="margin-top:8px;color:#DC2626;font-size:12px;">Introduces concepts (transformers, batch norm, early stopping) not in the course notes — confusing for a student studying for ML101.</p>
+      </div>
+      <div class="demo-box demo-with">
+        <h4>✅ With Context (Grounded answer)</h4>
+        <p>"Great question! Chapter 3 explains overfitting as when a model memorises the training data — it performs well on training data but poorly on new, unseen data. You can spot it by looking for low training loss but high validation loss. The course notes suggest these fixes: getting more training data, using dropout or regularisation (L1/L2), or using a simpler model. Keep going — this is a key concept!"</p>
+        <p style="margin-top:8px;color:#16A34A;font-size:12px;">Exactly what's in the notes, cites the chapter, stays on-topic for the exam.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ref-box">
+      <h3>Reference: API Version (requires ANTHROPIC_API_KEY) <span class="tag">Optional</span></h3>
+      <p>The file <code>grounded_qa.py</code> in this folder is a Python implementation using the Anthropic API directly. It requires an <code>ANTHROPIC_API_KEY</code> and is intended for educators who want to embed this study assistant into a course platform or LMS. The Claude Project approach above requires zero code and works immediately.</p>
+    </div>
+  </div>
+
+</div>
+<script>
+function copyBlock(id) {
+  const el = document.getElementById(id);
+  const text = el.textContent.replace('Copy','').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = el.querySelector('.copy-btn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
+function downloadFile(name, content) {
+  const a = document.createElement('a');
+  a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(content);
+  a.download = name;
+  a.click();
+}
+</script>
+</body>
+</html>

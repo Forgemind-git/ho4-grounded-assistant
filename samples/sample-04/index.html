@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample 04 — Compliance SOP Assistant · HO4</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#F8F9FA; color:#1a1a2e; }
+:root { --color:#D97706; }
+header { background:var(--color); color:#fff; padding:36px 32px 28px; }
+header .badge { font-size:12px; font-weight:700; letter-spacing:.08em; opacity:.8; text-transform:uppercase; margin-bottom:6px; }
+header h1 { font-size:26px; font-weight:800; margin-bottom:6px; }
+header p { font-size:14px; opacity:.85; max-width:640px; line-height:1.6; }
+.back { display:inline-flex; align-items:center; gap:6px; color:rgba(255,255,255,.8); text-decoration:none; font-size:13px; margin-bottom:14px; }
+.back:hover { color:#fff; }
+.content { max-width:860px; margin:0 auto; padding:32px 24px 60px; }
+.section { background:#fff; border-radius:10px; box-shadow:0 1px 6px rgba(0,0,0,.08); padding:28px 32px; margin-bottom:24px; }
+.section h2 { font-size:17px; font-weight:700; color:var(--color); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+.section h2 .step-num { background:var(--color); color:#fff; border-radius:50%; width:26px; height:26px; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0; }
+.section p { font-size:14px; line-height:1.7; color:#374151; margin-bottom:12px; }
+.section ul, .section ol { padding-left:20px; font-size:14px; color:#374151; line-height:1.8; margin-bottom:12px; }
+.code-block { background:#1e1e2e; color:#cdd6f4; border-radius:8px; padding:16px 20px; font-family:'Courier New',monospace; font-size:13px; line-height:1.7; position:relative; overflow-x:auto; margin:12px 0; white-space:pre-wrap; word-break:break-word; }
+.copy-btn { position:absolute; top:10px; right:12px; background:rgba(255,255,255,.15); color:#cdd6f4; border:none; border-radius:4px; padding:4px 10px; font-size:11px; cursor:pointer; }
+.copy-btn:hover { background:rgba(255,255,255,.25); }
+.file-item { border:1px solid #E5E7EB; border-radius:8px; margin-bottom:14px; overflow:hidden; }
+.file-header { background:#F3F4F6; padding:10px 16px; display:flex; justify-content:space-between; align-items:center; }
+.file-name { font-size:13px; font-weight:600; color:#374151; font-family:'Courier New',monospace; }
+.dl-btn { background:var(--color); color:#fff; border:none; border-radius:5px; padding:5px 12px; font-size:12px; font-weight:600; cursor:pointer; }
+.file-content { background:#1e1e2e; color:#cdd6f4; padding:14px 18px; font-family:'Courier New',monospace; font-size:12px; line-height:1.7; white-space:pre-wrap; max-height:260px; overflow-y:auto; }
+.q-list { list-style:none; padding:0; }
+.q-list li { background:#FFF7ED; border-left:3px solid var(--color); padding:10px 14px; margin-bottom:8px; border-radius:0 6px 6px 0; font-size:14px; color:#374151; font-style:italic; }
+.demo-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:4px; }
+.demo-box { border-radius:8px; padding:16px; font-size:13px; line-height:1.7; }
+.demo-without { background:#FEF2F2; border:1px solid #FECACA; }
+.demo-without h4 { color:#DC2626; margin-bottom:8px; font-size:13px; }
+.demo-with { background:#F0FDF4; border:1px solid #BBF7D0; }
+.demo-with h4 { color:#16A34A; margin-bottom:8px; font-size:13px; }
+.ref-box { background:#F8F9FA; border:1px solid #E5E7EB; border-radius:8px; padding:16px 20px; }
+.ref-box h3 { font-size:14px; font-weight:700; color:#6B7280; margin-bottom:8px; }
+.ref-box p { font-size:13px; color:#6B7280; line-height:1.6; }
+.tag { display:inline-block; background:#FEF3C7; color:#92400E; border-radius:4px; padding:2px 8px; font-size:11px; font-weight:600; margin-left:8px; }
+@media(max-width:600px){ .demo-grid{grid-template-columns:1fr;} .content{padding:20px 14px 40px;} .section{padding:20px 18px;} }
+</style>
+</head>
+<body>
+<header>
+  <a href="../../" class="back">← Back to HO4</a>
+  <div class="badge">HO4 · Sample 04</div>
+  <h1>Compliance SOP Assistant</h1>
+  <p>A Claude Project that answers data protection compliance questions using only your SOP documents — precise citations, no invented regulatory rules.</p>
+</header>
+
+<div class="content">
+
+  <div class="section">
+    <h2>The Problem</h2>
+    <p>Compliance questions are high-stakes. If Claude invents a rule — "you have 72 hours to delete data" instead of your actual 30-day requirement — an employee could follow wrong guidance and create legal exposure.</p>
+    <p>This assistant is grounded entirely in your SOP documents. It gives precise, citable answers and flags potential SOP violations clearly. When something isn't covered, it escalates to the DPO — not to general GDPR knowledge.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="step-num">1</span> Create a Claude Project</h2>
+    <ol>
+      <li>Go to <strong>claude.ai</strong> and sign in.</li>
+      <li>In the left sidebar, click <strong>+ New Project</strong>.</li>
+      <li>Name it: <code>Compliance SOP Assistant — Data Protection</code></li>
+      <li>You'll land on the Project page where you upload docs and set instructions.</li>
+    </ol>
+    <p><strong>Note:</strong> Projects require a Claude Pro or Team subscription.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="step-num">2</span> Upload These Knowledge Files</h2>
+    <p>In your Project, click <strong>Add content</strong> → <strong>Upload files</strong>. Download and upload the file below.</p>
+
+    <div class="file-item">
+      <div class="file-header">
+        <span class="file-name">policy.txt</span>
+        <button class="dl-btn" onclick="downloadFile('policy.txt', document.getElementById('policy-content').textContent)">Download</button>
+      </div>
+      <div class="file-content" id="policy-content">Data Protection & Compliance — Standard Operating Procedure (SOP-DPC-001)
+==========================================================================
+Version 2.3 | Effective: 2024-01-01 | Owner: Data Protection Officer (DPO)
+
+DATA STORAGE
+------------
+Customer data must be stored only in approved EU-region servers.
+Currently approved data centres: AWS eu-west-1 (Ireland), AWS eu-central-1 (Frankfurt).
+Any data transfer outside the EU requires a Data Transfer Agreement (DTA)
+signed by the DPO prior to the transfer.
+Temporary copies of data on developer laptops must be encrypted at rest and
+deleted within 48 hours of the task being complete.
+
+DATA RETENTION & DELETION
+--------------------------
+Personal data must be deleted within 30 days of receiving a customer deletion request.
+Deletion requests must be logged in the Data Requests Register within 24 hours of receipt.
+Automated deletion workflows must be verified by the DPO before being put into production.
+Backups containing personal data must also be purged within the 30-day window.
+
+AUDIT LOGS
+----------
+Audit logs must be retained for 7 years in accordance with financial regulation.
+Logs must be stored in an immutable format (write-once, cannot be altered).
+Access to audit logs is restricted to the DPO and the CISO.
+
+ACCESS CONTROL
+--------------
+Access to personal data is restricted to employees with a Data Access role.
+The Data Access role is granted by the DPO only.
+Access requests must be submitted via the IT helpdesk with a business justification.
+Access is reviewed and recertified quarterly.
+Departing employees must have all data access revoked within 24 hours of their last day.
+
+SECURITY INCIDENTS
+------------------
+Security incidents involving personal data must be reported to the DPO within 2 hours
+of detection, regardless of the time of day.
+The DPO will assess whether the incident requires notification to the supervisory authority
+(required within 72 hours of the organisation becoming aware of a qualifying breach).
+All incidents must be logged in the Incident Register using the standard template.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="step-num">3</span> Paste These System Instructions</h2>
+    <p>In your Project, click <strong>Edit project instructions</strong> and paste:</p>
+    <div class="code-block" id="instructions-block">You are a Compliance SOP Assistant for the Data Protection team.
+
+You answer compliance questions ONLY using the Standard Operating Procedure documents provided in your context.
+
+Rules you must follow:
+1. If the answer is in the SOP, give a precise and clear answer, always citing the relevant section name and rule (e.g. "Per the Access Control section of SOP-DPC-001...").
+2. If the answer is NOT in the SOP, say: "This is not covered in the current SOP documents. Please escalate to the DPO directly for guidance."
+3. Never guess at regulatory requirements or invent compliance rules not present in the documents.
+4. Compliance answers must be exact — avoid paraphrasing in a way that changes the meaning.
+5. If an action described by the user appears to violate the SOP, say so clearly and explain the correct procedure.<button class="copy-btn" onclick="copyBlock('instructions-block')">Copy</button></div>
+  </div>
+
+  <div class="section">
+    <h2><span class="step-num">4</span> Test It</h2>
+    <p>Start a new conversation inside the Project and try these questions:</p>
+    <ul class="q-list">
+      <li>Can I store customer data on a US server?</li>
+      <li>How long do I have to delete data after a deletion request?</li>
+      <li>Who can access personal data?</li>
+      <li>When must I report a security incident?</li>
+      <li>How long must audit logs be kept?</li>
+      <li>Do I need approval to transfer data to a partner in Canada?</li>
+    </ul>
+    <p><strong>Expected quality:</strong> Precise citations (e.g. "Per the Data Storage section of SOP-DPC-001…"), exact timeframes, and clear escalation if something isn't in the SOP. The assistant should flag SOP violations — e.g. if someone says they want to store data on a US server, it should explain why that violates the SOP and what the correct procedure is.</p>
+  </div>
+
+  <div class="section">
+    <h2>Before vs After Demo</h2>
+    <p><strong>Question:</strong> "Can I store customer data on a US server?"</p>
+    <div class="demo-grid">
+      <div class="demo-box demo-without">
+        <h4>❌ Without Context (Claude guessing)</h4>
+        <p>"It depends on your company's data protection policy and where your customers are located. If you have EU customers, GDPR may apply. You might need Standard Contractual Clauses (SCCs) or other transfer mechanisms. Check with your legal team."</p>
+        <p style="margin-top:8px;color:#DC2626;font-size:12px;">Generic GDPR advice — doesn't say what YOUR company requires.</p>
+      </div>
+      <div class="demo-box demo-with">
+        <h4>✅ With Context (Grounded answer)</h4>
+        <p>"No — this would violate SOP-DPC-001. Per the Data Storage section, customer data must be stored only in approved EU-region servers (AWS eu-west-1 Ireland or AWS eu-central-1 Frankfurt). Any transfer outside the EU requires a Data Transfer Agreement signed by the DPO prior to the transfer. You should not proceed without contacting the DPO first."</p>
+        <p style="margin-top:8px;color:#16A34A;font-size:12px;">Exact SOP citation, clear violation flag, correct procedure stated.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ref-box">
+      <h3>Reference: API Version (requires ANTHROPIC_API_KEY) <span class="tag">Optional</span></h3>
+      <p>The file <code>grounded_qa.py</code> in this folder is a Python implementation using the Anthropic API directly. It requires an <code>ANTHROPIC_API_KEY</code> and is for teams who want to embed this compliance assistant into an internal chat tool or ticketing system. The Claude Project approach above requires zero code.</p>
+    </div>
+  </div>
+
+</div>
+<script>
+function copyBlock(id) {
+  const el = document.getElementById(id);
+  const text = el.textContent.replace('Copy','').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = el.querySelector('.copy-btn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
+function downloadFile(name, content) {
+  const a = document.createElement('a');
+  a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(content);
+  a.download = name;
+  a.click();
+}
+</script>
+</body>
+</html>
